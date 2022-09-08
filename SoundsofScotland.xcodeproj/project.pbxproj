@@ -21,6 +21,7 @@
 		A27775D228C6A2F600A5ED97 /* SquareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27775D128C6A2F500A5ED97 /* SquareCard.swift */; };
 		A27775D428C6B0F400A5ED97 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27775D328C6B0F400A5ED97 /* TitleView.swift */; };
 		A27775D628C6C08700A5ED97 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27775D528C6C08700A5ED97 /* SideMenu.swift */; };
+		A29CCF5F28CA9D6B005A9091 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A29CCF5E28CA9D6B005A9091 /* RiveRuntime */; };
 		A2B3EEC328C8CE20006F2586 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3EEC228C8CE20006F2586 /* TabBar.swift */; };
 		A2BA7EC128C686D400D613DD /* SoundsofScotlandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA7EC028C686D400D613DD /* SoundsofScotlandApp.swift */; };
 		A2BA7EC328C686D400D613DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BA7EC228C686D400D613DD /* ContentView.swift */; };
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29CCF5F28CA9D6B005A9091 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +171,7 @@
 			);
 			name = SoundsofScotland;
 			packageProductDependencies = (
+				A29CCF5E28CA9D6B005A9091 /* RiveRuntime */,
 			);
 			productName = SoundsofScotland;
 			productReference = A2BA7EBD28C686D400D613DD /* SoundsofScotland.app */;
@@ -200,6 +203,7 @@
 			mainGroup = A2BA7EB428C686D400D613DD;
 			packageReferences = (
 				A238270C28C6C42100271A66 /* XCRemoteSwiftPackageReference "rive-ios" */,
+				A29CCF5D28CA9D6B005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = A2BA7EBE28C686D400D613DD /* Products */;
 			projectDirPath = "";
@@ -462,7 +466,23 @@
 				kind = branch;
 			};
 		};
+		A29CCF5D28CA9D6B005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 3.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A29CCF5E28CA9D6B005A9091 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A29CCF5D28CA9D6B005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2BA7EB528C686D400D613DD /* Project object */;
 }
