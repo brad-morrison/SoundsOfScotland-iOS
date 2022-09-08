@@ -51,7 +51,7 @@ struct ContentView: View {
                     }
                 }
             
-            //TabBar()
+            TabBar()
                 .offset(y: isOpen ? 100 : 0)
             
             

@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
+		A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7028CA9F6D005A9091 /* Assets.xcassets */; };
+		A29CCF7428CA9F6D005A9091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7328CA9F6D005A9091 /* Preview Assets.xcassets */; };
+		A29CCF8328CA9FA6005A9091 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7B28CA9FA6005A9091 /* house.riv */; };
+		A29CCF8428CA9FA6005A9091 /* new_file.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7C28CA9FA6005A9091 /* new_file.riv */; };
+		A29CCF8528CA9FA6005A9091 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7D28CA9FA6005A9091 /* confetti.riv */; };
+		A29CCF8628CA9FA6005A9091 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7E28CA9FA6005A9091 /* check.riv */; };
+		A29CCF8728CA9FA6005A9091 /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7F28CA9FA6005A9091 /* menu_button.riv */; };
+		A29CCF8828CA9FA6005A9091 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8028CA9FA6005A9091 /* shapes.riv */; };
+		A29CCF8928CA9FA6005A9091 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8128CA9FA6005A9091 /* button.riv */; };
+		A29CCF8A28CA9FA6005A9091 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8228CA9FA6005A9091 /* icons.riv */; };
+		A29CCF9028CA9FB3005A9091 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8C28CA9FB3005A9091 /* Inter-Regular.ttf */; };
+		A29CCF9128CA9FB3005A9091 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8D28CA9FB3005A9091 /* Poppins-Bold.ttf */; };
+		A29CCF9228CA9FB3005A9091 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF8E28CA9FB3005A9091 /* CustomFont.swift */; };
+		A29CCF9328CA9FB3005A9091 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF8F28CA9FB3005A9091 /* Inter-SemiBold.ttf */; };
+		A29CCF9728CAA0CD005A9091 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A29CCF9628CAA0CD005A9091 /* RiveRuntime */; };
+		A29CCF9E28CAA12A005A9091 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF9A28CAA12A005A9091 /* TitleView.swift */; };
+		A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF9B28CAA12A005A9091 /* HomeView.swift */; };
+		A29CCFA028CAA12A005A9091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF9C28CAA12A005A9091 /* ContentView.swift */; };
+		A29CCFA128CAA12A005A9091 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF9D28CAA12A005A9091 /* SceneView.swift */; };
+		A29CCFA928CAA141005A9091 /* RoundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA228CAA141005A9091 /* RoundCard.swift */; };
+		A29CCFAA28CAA141005A9091 /* SquareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA328CAA141005A9091 /* SquareCard.swift */; };
+		A29CCFAB28CAA141005A9091 /* MediumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA428CAA141005A9091 /* MediumCard.swift */; };
+		A29CCFAC28CAA141005A9091 /* LargeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA528CAA141005A9091 /* LargeCard.swift */; };
+		A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA628CAA141005A9091 /* LargeWideCard.swift */; };
+		A29CCFAE28CAA141005A9091 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA728CAA141005A9091 /* TabBar.swift */; };
+		A29CCFAF28CAA141005A9091 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFA828CAA141005A9091 /* SideMenu.swift */; };
+		A29CCFB228CAA155005A9091 /* Soundscapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCFB128CAA155005A9091 /* Soundscapes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfScotland_iOSApp.swift; sourceTree = "<group>"; };
+		A29CCF7028CA9F6D005A9091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A29CCF7328CA9F6D005A9091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A29CCF7B28CA9FA6005A9091 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
+		A29CCF7C28CA9FA6005A9091 /* new_file.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_file.riv; sourceTree = "<group>"; };
+		A29CCF7D28CA9FA6005A9091 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
+		A29CCF7E28CA9FA6005A9091 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
+		A29CCF7F28CA9FA6005A9091 /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
+		A29CCF8028CA9FA6005A9091 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
+		A29CCF8128CA9FA6005A9091 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
+		A29CCF8228CA9FA6005A9091 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		A29CCF8C28CA9FB3005A9091 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		A29CCF8D28CA9FB3005A9091 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		A29CCF8E28CA9FB3005A9091 /* CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		A29CCF8F28CA9FB3005A9091 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		A29CCF9428CAA02B005A9091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A29CCF9A28CAA12A005A9091 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		A29CCF9B28CAA12A005A9091 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A29CCF9C28CAA12A005A9091 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A29CCF9D28CAA12A005A9091 /* SceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		A29CCFA228CAA141005A9091 /* RoundCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCard.swift; sourceTree = "<group>"; };
+		A29CCFA328CAA141005A9091 /* SquareCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareCard.swift; sourceTree = "<group>"; };
+		A29CCFA428CAA141005A9091 /* MediumCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumCard.swift; sourceTree = "<group>"; };
+		A29CCFA528CAA141005A9091 /* LargeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeCard.swift; sourceTree = "<group>"; };
+		A29CCFA628CAA141005A9091 /* LargeWideCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeWideCard.swift; sourceTree = "<group>"; };
+		A29CCFA728CAA141005A9091 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		A29CCFA828CAA141005A9091 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		A29CCFB128CAA155005A9091 /* Soundscapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soundscapes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A29CCF6628CA9F6D005A9091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29CCF9728CAA0CD005A9091 /* RiveRuntime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A29CCF6028CA9F6D005A9091 = {
+			isa = PBXGroup;
+			children = (
+				A29CCF6B28CA9F6D005A9091 /* SoundsOfScotland-iOS */,
+				A29CCF6A28CA9F6D005A9091 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A29CCF6A28CA9F6D005A9091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A29CCF6B28CA9F6D005A9091 /* SoundsOfScotland-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF9428CAA02B005A9091 /* Info.plist */,
+				A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */,
+				A29CCFB028CAA148005A9091 /* Model */,
+				A29CCF9828CAA0E4005A9091 /* Components */,
+				A29CCF9928CAA0F6005A9091 /* Views */,
+				A29CCF7028CA9F6D005A9091 /* Assets.xcassets */,
+				A29CCF7A28CA9FA6005A9091 /* RiveAssets */,
+				A29CCF8B28CA9FB3005A9091 /* Fonts */,
+				A29CCF7228CA9F6D005A9091 /* Preview Content */,
+			);
+			path = "SoundsOfScotland-iOS";
+			sourceTree = "<group>";
+		};
+		A29CCF7228CA9F6D005A9091 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF7328CA9F6D005A9091 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A29CCF7A28CA9FA6005A9091 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF7B28CA9FA6005A9091 /* house.riv */,
+				A29CCF7C28CA9FA6005A9091 /* new_file.riv */,
+				A29CCF7D28CA9FA6005A9091 /* confetti.riv */,
+				A29CCF7E28CA9FA6005A9091 /* check.riv */,
+				A29CCF7F28CA9FA6005A9091 /* menu_button.riv */,
+				A29CCF8028CA9FA6005A9091 /* shapes.riv */,
+				A29CCF8128CA9FA6005A9091 /* button.riv */,
+				A29CCF8228CA9FA6005A9091 /* icons.riv */,
+			);
+			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		A29CCF8B28CA9FB3005A9091 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF8E28CA9FB3005A9091 /* CustomFont.swift */,
+				A29CCF8C28CA9FB3005A9091 /* Inter-Regular.ttf */,
+				A29CCF8D28CA9FB3005A9091 /* Poppins-Bold.ttf */,
+				A29CCF8F28CA9FB3005A9091 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A29CCF9828CAA0E4005A9091 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCFA528CAA141005A9091 /* LargeCard.swift */,
+				A29CCFA628CAA141005A9091 /* LargeWideCard.swift */,
+				A29CCFA428CAA141005A9091 /* MediumCard.swift */,
+				A29CCFA228CAA141005A9091 /* RoundCard.swift */,
+				A29CCFA828CAA141005A9091 /* SideMenu.swift */,
+				A29CCFA328CAA141005A9091 /* SquareCard.swift */,
+				A29CCFA728CAA141005A9091 /* TabBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A29CCF9928CAA0F6005A9091 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCF9C28CAA12A005A9091 /* ContentView.swift */,
+				A29CCF9B28CAA12A005A9091 /* HomeView.swift */,
+				A29CCF9D28CAA12A005A9091 /* SceneView.swift */,
+				A29CCF9A28CAA12A005A9091 /* TitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A29CCFB028CAA148005A9091 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A29CCFB128CAA155005A9091 /* Soundscapes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A29CCF6828CA9F6D005A9091 /* SoundsOfScotland-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A29CCF7728CA9F6D005A9091 /* Build configuration list for PBXNativeTarget "SoundsOfScotland-iOS" */;
+			buildPhases = (
+				A29CCF6528CA9F6D005A9091 /* Sources */,
+				A29CCF6628CA9F6D005A9091 /* Frameworks */,
+				A29CCF6728CA9F6D005A9091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SoundsOfScotland-iOS";
+			packageProductDependencies = (
+				A29CCF9628CAA0CD005A9091 /* RiveRuntime */,
+			);
+			productName = "SoundsOfScotland-iOS";
+			productReference = A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A29CCF6128CA9F6D005A9091 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					A29CCF6828CA9F6D005A9091 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A29CCF6428CA9F6D005A9091 /* Build configuration list for PBXProject "SoundsOfScotland-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A29CCF6028CA9F6D005A9091;
+			packageReferences = (
+				A29CCF9528CAA0CD005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
+			productRefGroup = A29CCF6A28CA9F6D005A9091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A29CCF6828CA9F6D005A9091 /* SoundsOfScotland-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A29CCF6728CA9F6D005A9091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29CCF8A28CA9FA6005A9091 /* icons.riv in Resources */,
+				A29CCF8628CA9FA6005A9091 /* check.riv in Resources */,
+				A29CCF8428CA9FA6005A9091 /* new_file.riv in Resources */,
+				A29CCF7428CA9F6D005A9091 /* Preview Assets.xcassets in Resources */,
+				A29CCF9328CA9FB3005A9091 /* Inter-SemiBold.ttf in Resources */,
+				A29CCF8928CA9FA6005A9091 /* button.riv in Resources */,
+				A29CCF8328CA9FA6005A9091 /* house.riv in Resources */,
+				A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */,
+				A29CCF9128CA9FB3005A9091 /* Poppins-Bold.ttf in Resources */,
+				A29CCF8828CA9FA6005A9091 /* shapes.riv in Resources */,
+				A29CCF9028CA9FB3005A9091 /* Inter-Regular.ttf in Resources */,
+				A29CCF8728CA9FA6005A9091 /* menu_button.riv in Resources */,
+				A29CCF8528CA9FA6005A9091 /* confetti.riv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A29CCF6528CA9F6D005A9091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29CCF9228CA9FB3005A9091 /* CustomFont.swift in Sources */,
+				A29CCFA028CAA12A005A9091 /* ContentView.swift in Sources */,
+				A29CCFB228CAA155005A9091 /* Soundscapes.swift in Sources */,
+				A29CCFA928CAA141005A9091 /* RoundCard.swift in Sources */,
+				A29CCFAE28CAA141005A9091 /* TabBar.swift in Sources */,
+				A29CCFAC28CAA141005A9091 /* LargeCard.swift in Sources */,
+				A29CCFAB28CAA141005A9091 /* MediumCard.swift in Sources */,
+				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
+				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
+				A29CCFAF28CAA141005A9091 /* SideMenu.swift in Sources */,
+				A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */,
+				A29CCF9E28CAA12A005A9091 /* TitleView.swift in Sources */,
+				A29CCFAA28CAA141005A9091 /* SquareCard.swift in Sources */,
+				A29CCFA128CAA12A005A9091 /* SceneView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A29CCF7528CA9F6D005A9091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A29CCF7628CA9F6D005A9091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A29CCF7828CA9F6D005A9091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundsOfScotland-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 4CPXHR7FCP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SoundsOfScotland-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "brad.SoundsOfScotland-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A29CCF7928CA9F6D005A9091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundsOfScotland-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 4CPXHR7FCP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SoundsOfScotland-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "brad.SoundsOfScotland-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A29CCF6428CA9F6D005A9091 /* Build configuration list for PBXProject "SoundsOfScotland-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29CCF7528CA9F6D005A9091 /* Debug */,
+				A29CCF7628CA9F6D005A9091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A29CCF7728CA9F6D005A9091 /* Build configuration list for PBXNativeTarget "SoundsOfScotland-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A29CCF7828CA9F6D005A9091 /* Debug */,
+				A29CCF7928CA9F6D005A9091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A29CCF9528CAA0CD005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A29CCF9628CAA0CD005A9091 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A29CCF9528CAA0CD005A9091 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A29CCF6128CA9F6D005A9091 /* Project object */;
+}
