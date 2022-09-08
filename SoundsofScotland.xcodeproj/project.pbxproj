@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A238270E28C6C42100271A66 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A238270D28C6C42100271A66 /* RiveRuntime */; };
 		A238271728C6C47400271A66 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = A238271028C6C47400271A66 /* house.riv */; };
 		A238271828C6C47400271A66 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = A238271128C6C47400271A66 /* confetti.riv */; };
 		A238271928C6C47400271A66 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = A238271228C6C47400271A66 /* check.riv */; };
@@ -72,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A238270E28C6C42100271A66 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +169,6 @@
 			);
 			name = SoundsofScotland;
 			packageProductDependencies = (
-				A238270D28C6C42100271A66 /* RiveRuntime */,
 			);
 			productName = SoundsofScotland;
 			productReference = A2BA7EBD28C686D400D613DD /* SoundsofScotland.app */;
@@ -466,14 +463,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A238270D28C6C42100271A66 /* RiveRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A238270C28C6C42100271A66 /* XCRemoteSwiftPackageReference "rive-ios" */;
-			productName = RiveRuntime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2BA7EB528C686D400D613DD /* Project object */;
 }
