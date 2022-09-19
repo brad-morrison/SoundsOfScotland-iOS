@@ -23,7 +23,7 @@ struct TabBar: View {
             .frame(height: 300, alignment: .topLeading)
             .background(Color("Background"))
             .mask(RoundedRectangle(cornerRadius: 40, style: .continuous))
-            .offset(y: 245)
+            .offset(y: 235)
         }
     }
     
