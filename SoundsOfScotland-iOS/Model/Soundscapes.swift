@@ -21,4 +21,5 @@ var soundscapes = [
     Soundscape(title: "Highland Stream", image: Image("4")),
     Soundscape(title: "Edinburgh Festival", image: Image("5")),
     Soundscape(title: "Loch Lomond", image: Image("6")),
+    Soundscape(title: "Bradley Morrison", image: Image("6")),
 ]
