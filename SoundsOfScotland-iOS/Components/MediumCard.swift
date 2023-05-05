@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MediumCard: View {
     var soundscape: Soundscape
-    // ggg
+    // gggg
     var body: some View {
         Button {} label:  {
             HStack(spacing: 20) {
