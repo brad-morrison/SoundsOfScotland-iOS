@@ -15,11 +15,12 @@ struct SideMenu: View {
             HStack {
                 Image(systemName: "person")
                     .padding(12)
-                    .background(.white.opacity(0.2))
+                    .background(.white.opacity(0.8))
                     .mask(Circle())
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Bradley Morrison")
                         .customFont(.body)
+                        .foregroundColor(.white)
                 }
                 Spacer()
             }
@@ -27,6 +28,7 @@ struct SideMenu: View {
             
             Text("BROWSE")
                 .customFont(.subheadline2)
+                .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
@@ -36,6 +38,7 @@ struct SideMenu: View {
             
             Text("HISTORY")
                 .customFont(.subheadline2)
+                .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
@@ -48,7 +51,7 @@ struct SideMenu: View {
         }
         .foregroundColor(.black)
         .frame(maxWidth: 288, maxHeight: .infinity)
-        .background(Color("Background Light"))
+        .background(Color("Background"))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .frame(maxWidth: .infinity, alignment: .leading)
     }

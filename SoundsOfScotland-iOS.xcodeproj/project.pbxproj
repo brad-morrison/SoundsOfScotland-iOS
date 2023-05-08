@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
 		A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7028CA9F6D005A9091 /* Assets.xcassets */; };
 		A29CCF7428CA9F6D005A9091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7328CA9F6D005A9091 /* Preview Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfScotland_iOSApp.swift; sourceTree = "<group>"; };
 		A29CCF7028CA9F6D005A9091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				A29CCFA828CAA141005A9091 /* SideMenu.swift */,
 				A29CCFA328CAA141005A9091 /* SquareCard.swift */,
 				A29CCFA728CAA141005A9091 /* TabBar.swift */,
+				468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				A29CCFA928CAA141005A9091 /* RoundCard.swift in Sources */,
 				A29CCFAE28CAA141005A9091 /* TabBar.swift in Sources */,
 				A29CCFAC28CAA141005A9091 /* LargeCard.swift in Sources */,
+				468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */,
 				A29CCFAB28CAA141005A9091 /* MediumCard.swift in Sources */,
 				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
 				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
@@ -416,8 +420,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,8 +450,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

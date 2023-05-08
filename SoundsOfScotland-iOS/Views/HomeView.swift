@@ -24,6 +24,7 @@ struct HomeView: View {
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         
     }
+        
 }
 
 let columns = [
@@ -170,9 +171,10 @@ var comingSoon_Section: some View {
             .padding(.horizontal, 20)
         
         // large featured cards
-        LargeWideCard(comingSoon: true, soundscape: soundscapes[6])
+        LargeWideCard(comingSoon: true, soundscape: soundscapes[7])
         .padding(20)
     }
+    .padding(.bottom, 110)
 }
 
 struct HomeView_Previews: PreviewProvider {
