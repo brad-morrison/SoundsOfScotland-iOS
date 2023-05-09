@@ -11,6 +11,7 @@ import RiveRuntime
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @State var isOpen = false
+    @State var tabOpen = true
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
@@ -48,11 +49,20 @@ struct ContentView: View {
                     button.setInput("isOpen", value: isOpen)
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                         isOpen.toggle()
+                        tabOpen.toggle()
                     }
                 }
             
             TabBar()
-                .offset(y: isOpen ? 120 : 0)
+                .onChange(of: selectedTab) { newValue in
+                    if (selectedTab == .nowPlaying) {
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                            tabOpen.toggle()
+                        }
+                    }
+                }
+                .offset(y: tabOpen ? 0 : 120)
+                
             
             
         }
