@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SceneView: View {
+    @Binding var tabOpen: Bool
+    @Binding var selectedTab: Tab
+    @Binding var nowPlayingOpen: Bool
     var body: some View {
         ZStack {
             VStack {
@@ -19,6 +22,12 @@ struct SceneView: View {
                 
                 HStack {
                     RoundButton(type: "chevron.backward", size: 30)
+                        .onTapGesture {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                tabOpen.toggle()
+                                selectedTab = .home
+                            }
+                        }
                     RoundButton(type: "play.fill", size: 50)
                     RoundButton(type: "star.fill", size: 30)
                 }
@@ -34,7 +43,10 @@ struct SceneView: View {
 }
 
 struct SceneView_Previews: PreviewProvider {
+    @State static var tabOpen = false
+    @State static var nowPlayingOpen = false
+    @State static var selectedTab: Tab = .home
     static var previews: some View {
-        SceneView()
+        SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
     }
 }

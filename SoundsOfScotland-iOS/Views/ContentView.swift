@@ -12,6 +12,7 @@ struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .home
     @State var isOpen = false
     @State var tabOpen = true
+    @State var nowPlayingOpen = false
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
@@ -34,7 +35,7 @@ struct ContentView: View {
                 case .starred:
                     Text("Starred")
                 case .nowPlaying:
-                    SceneView()
+                    SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
                 }
             }
             
@@ -45,6 +46,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding()
                 .offset(x: isOpen ? 220 : 0)
+                .offset(x: nowPlayingOpen ? -80 : 0)
                 .onTapGesture {
                     button.setInput("isOpen", value: isOpen)
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
@@ -58,6 +60,12 @@ struct ContentView: View {
                     if (selectedTab == .nowPlaying) {
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                             tabOpen.toggle()
+                            nowPlayingOpen.toggle()
+                        }
+                    }
+                    else {
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                            nowPlayingOpen = false
                         }
                     }
                 }
