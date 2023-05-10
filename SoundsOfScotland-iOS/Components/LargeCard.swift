@@ -13,10 +13,10 @@ struct LargeCard: View {
     var body: some View {
         NavigationLink(destination: SceneView(soundscape: soundscape)) {
             Button {
-                //
-                data.soundscape = soundscape
-                data.selectedTab = Tab.nowPlaying
-                //
+                
+                data.soundscape = soundscape // set current soundscape to this one
+                data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                
             } label:  {
                 VStack(alignment: .leading, spacing: 8) {
                     
@@ -37,7 +37,7 @@ struct LargeCard: View {
                 )
                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 12)
-            .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
+                .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
         }
         }
         
@@ -49,5 +49,6 @@ struct LargeCard: View {
 struct LargeCard_Previews: PreviewProvider {
     static var previews: some View {
         LargeCard(soundscape: soundscapes[0])
+            .environmentObject(AppData())
     }
 }

@@ -22,7 +22,7 @@ struct HomeView: View {
                 
             }
             .ignoresSafeArea()
-        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         }
         
     }
