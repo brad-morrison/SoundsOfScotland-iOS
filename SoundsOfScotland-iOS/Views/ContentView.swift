@@ -10,31 +10,35 @@ import RiveRuntime
 
 @MainActor class AppData : ObservableObject {
     @Published var soundscape = soundscapes[1]
+    @Published var tabOpen = true
+    @Published var settingsButtonStatus = false
+    @Published var nowPlayingOpen = false
+    @Published var selectedTab: Tab = .home
 }
 
 struct ContentView: View {
-    @AppStorage("selectedTab") var selectedTab: Tab = .home
+    //@AppStorage("selectedTab") var selectedTab: Tab = .home
     @StateObject var data = AppData()
-    @State var isOpen = false
-    @State var tabOpen = true
-    @State var nowPlayingOpen = false
+    //@State var isOpen = false
+    //@State var tabOpen = true
+    //@State var nowPlayingOpen = false
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
         
             ZStack {
                 SideMenu()
-                    .opacity(isOpen ? 1 : 0)
-                    .offset(x: isOpen ? 0 : -300)
-                    .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x:0 , y: 1, z: 0))
+                    .opacity(data.settingsButtonStatus ? 1 : 0)
+                    .offset(x: data.settingsButtonStatus ? 0 : -300)
+                    .rotation3DEffect(.degrees(data.settingsButtonStatus ? 0 : 30), axis: (x:0 , y: 1, z: 0))
                 
                 Group {
-                    switch selectedTab {
+                    switch data.selectedTab {
                     case .home:
                         HomeView()
-                            .rotation3DEffect(.degrees(isOpen ? 30 : 0), axis: (x: 0, y: -1, z: 0))
-                            .offset(x: isOpen ? 265 : 0)
-                            .scaleEffect(isOpen ? 0.9 : 1)
+                            .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
+                            .offset(x: data.settingsButtonStatus ? 265 : 0)
+                            .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
                             .ignoresSafeArea()
                     case .categories:
                         Text("Categories")
@@ -52,31 +56,31 @@ struct ContentView: View {
                     .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .padding()
-                    .offset(x: isOpen ? 220 : 0)
-                    .offset(x: nowPlayingOpen ? -80 : 0)
+                    .offset(x: data.settingsButtonStatus ? 220 : 0)
+                    .offset(x: data.nowPlayingOpen ? -80 : 0)
                     .onTapGesture {
-                        button.setInput("isOpen", value: isOpen)
+                        button.setInput("data.settingsButtonStatus", value: data.settingsButtonStatus)
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                            isOpen.toggle()
-                            tabOpen.toggle()
+                            data.settingsButtonStatus.toggle()
+                            data.tabOpen.toggle()
                         }
                     }
                 
                 TabBar()
-                    .onChange(of: selectedTab) { newValue in
-                        if (selectedTab == .nowPlaying) {
+                    .onChange(of: data.selectedTab) { newValue in
+                        if (data.selectedTab == .nowPlaying) {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                tabOpen.toggle()
-                                nowPlayingOpen.toggle()
+                                data.tabOpen.toggle()
+                                data.nowPlayingOpen.toggle()
                             }
                         }
                         else {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                nowPlayingOpen = false
+                                data.nowPlayingOpen = false
                             }
                         }
                     }
-                    .offset(y: tabOpen ? 0 : 120)
+                    .offset(y: data.tabOpen ? 0 : 120)
                     
                 
                 

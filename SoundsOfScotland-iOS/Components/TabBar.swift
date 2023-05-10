@@ -9,7 +9,8 @@ import SwiftUI
 import RiveRuntime
 
 struct TabBar: View {
-    @AppStorage("selectedTab") var selectedTab: Tab = .home
+    //@AppStorage("selectedTab") var selectedTab: Tab = .home
+    @EnvironmentObject var data : AppData
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
@@ -35,17 +36,17 @@ struct TabBar: View {
                     item.icon.setInput("active", value: false)
                 }
                 withAnimation(.spring(response: 0.22, dampingFraction: 0.4)) {
-                    selectedTab = item.tab
+                    data.selectedTab = item.tab
                 }
             } label: {
                 item.icon.view()
                     .frame(height: 36)
-                    .opacity(selectedTab == item.tab ? 1 : 0.5)
+                    .opacity(data.selectedTab == item.tab ? 1 : 0.5)
                     .background(
                         VStack {
                             RoundedRectangle(cornerRadius: 50)
-                                .frame(width: selectedTab == item.tab ? 60 : 0, height: 60)
-                                .opacity(selectedTab == item.tab ? 1 : 0)
+                                .frame(width: data.selectedTab == item.tab ? 60 : 0, height: 60)
+                                .opacity(data.selectedTab == item.tab ? 1 : 0)
                                 .foregroundColor(.black.opacity(0.25))
                         }
                     )

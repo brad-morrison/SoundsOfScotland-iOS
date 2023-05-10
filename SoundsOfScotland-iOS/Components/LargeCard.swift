@@ -9,9 +9,14 @@ import SwiftUI
 
 struct LargeCard: View {
     var soundscape: Soundscape
+    @EnvironmentObject var data : AppData
     var body: some View {
         NavigationLink(destination: SceneView(soundscape: soundscape)) {
             Button {
+                //
+                data.soundscape = soundscape
+                data.selectedTab = Tab.nowPlaying
+                //
             } label:  {
                 VStack(alignment: .leading, spacing: 8) {
                     

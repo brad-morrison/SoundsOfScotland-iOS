@@ -26,8 +26,9 @@ struct SceneView: View {
                     RoundButton(type: "chevron.backward", size: 30)
                         .onTapGesture {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                //tabOpen.toggle()
-                                //selectedTab = .home
+                                data.tabOpen.toggle()
+                                data.nowPlayingOpen.toggle()
+                                data.selectedTab = .home
                             }
                         }
                     RoundButton(type: "play.fill", size: 50)
