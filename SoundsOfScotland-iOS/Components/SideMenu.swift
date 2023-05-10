@@ -20,7 +20,7 @@ struct SideMenu: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Bradley Morrison")
                         .customFont(.body)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
                 Spacer()
             }
@@ -28,7 +28,7 @@ struct SideMenu: View {
             
             Text("BROWSE")
                 .customFont(.subheadline2)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
@@ -38,7 +38,7 @@ struct SideMenu: View {
             
             Text("HISTORY")
                 .customFont(.subheadline2)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
@@ -51,7 +51,7 @@ struct SideMenu: View {
         }
         .foregroundColor(.black)
         .frame(maxWidth: 288, maxHeight: .infinity)
-        .background(Color("Background"))
+        .background(Color("Background Light"))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .frame(maxWidth: .infinity, alignment: .leading)
     }

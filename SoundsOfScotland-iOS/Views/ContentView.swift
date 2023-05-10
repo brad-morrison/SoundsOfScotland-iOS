@@ -8,74 +8,84 @@
 import SwiftUI
 import RiveRuntime
 
+@MainActor class AppData : ObservableObject {
+    @Published var soundscape = soundscapes[1]
+}
+
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .home
+    @StateObject var data = AppData()
     @State var isOpen = false
     @State var tabOpen = true
     @State var nowPlayingOpen = false
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
-        ZStack {
-            SideMenu()
-                .opacity(isOpen ? 1 : 0)
-                .offset(x: isOpen ? 0 : -300)
-                .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x:0 , y: 1, z: 0))
-            
-            Group {
-                switch selectedTab {
-                case .home:
-                    HomeView()
-                        .rotation3DEffect(.degrees(isOpen ? 30 : 0), axis: (x: 0, y: -1, z: 0))
-                        .offset(x: isOpen ? 265 : 0)
-                        .scaleEffect(isOpen ? 0.9 : 1)
-                        .ignoresSafeArea()
-                case .categories:
-                    Text("Categories")
-                case .starred:
-                    Text("Starred")
-                case .nowPlaying:
-                    SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
-                }
-            }
-            
-            button.view()
-                .frame(width: 44, height: 44)
-                .mask(Circle())
-                .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding()
-                .offset(x: isOpen ? 220 : 0)
-                .offset(x: nowPlayingOpen ? -80 : 0)
-                .onTapGesture {
-                    button.setInput("isOpen", value: isOpen)
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                        isOpen.toggle()
-                        tabOpen.toggle()
-                    }
-                }
-            
-            TabBar()
-                .onChange(of: selectedTab) { newValue in
-                    if (selectedTab == .nowPlaying) {
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                            tabOpen.toggle()
-                            nowPlayingOpen.toggle()
-                        }
-                    }
-                    else {
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                            nowPlayingOpen = false
-                        }
-                    }
-                }
-                .offset(y: tabOpen ? 0 : 120)
+        
+            ZStack {
+                SideMenu()
+                    .opacity(isOpen ? 1 : 0)
+                    .offset(x: isOpen ? 0 : -300)
+                    .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x:0 , y: 1, z: 0))
                 
-            
-            
+                Group {
+                    switch selectedTab {
+                    case .home:
+                        HomeView()
+                            .rotation3DEffect(.degrees(isOpen ? 30 : 0), axis: (x: 0, y: -1, z: 0))
+                            .offset(x: isOpen ? 265 : 0)
+                            .scaleEffect(isOpen ? 0.9 : 1)
+                            .ignoresSafeArea()
+                    case .categories:
+                        Text("Categories")
+                    case .starred:
+                        Text("Starred")
+                    case .nowPlaying:
+                        //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
+                        SceneView(soundscape: soundscapes[0])
+                    }
+                }
+                
+                button.view()
+                    .frame(width: 44, height: 44)
+                    .mask(Circle())
+                    .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .padding()
+                    .offset(x: isOpen ? 220 : 0)
+                    .offset(x: nowPlayingOpen ? -80 : 0)
+                    .onTapGesture {
+                        button.setInput("isOpen", value: isOpen)
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                            isOpen.toggle()
+                            tabOpen.toggle()
+                        }
+                    }
+                
+                TabBar()
+                    .onChange(of: selectedTab) { newValue in
+                        if (selectedTab == .nowPlaying) {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                tabOpen.toggle()
+                                nowPlayingOpen.toggle()
+                            }
+                        }
+                        else {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                nowPlayingOpen = false
+                            }
+                        }
+                    }
+                    .offset(y: tabOpen ? 0 : 120)
+                    
+                
+                
+            }
+            .environmentObject(data)
+            .background(Color("Background Light"))
         }
-        .background(Color("Background Light"))
-    }
+        
+    
     
 }
 

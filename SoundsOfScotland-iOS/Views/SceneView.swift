@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct SceneView: View {
-    @Binding var tabOpen: Bool
-    @Binding var selectedTab: Tab
-    @Binding var nowPlayingOpen: Bool
+    //@Binding var tabOpen: Bool
+    //@Binding var selectedTab: Tab
+    //@Binding var nowPlayingOpen: Bool
+    var soundscape: Soundscape
+    @EnvironmentObject var data : AppData
     var body: some View {
         ZStack {
             VStack {
-                Text("NOW PLAYING")
+                Text(data.soundscape.title)
                     .foregroundColor(.white)
                     .customFont(.largeTitle)
                 
@@ -24,8 +26,8 @@ struct SceneView: View {
                     RoundButton(type: "chevron.backward", size: 30)
                         .onTapGesture {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                tabOpen.toggle()
-                                selectedTab = .home
+                                //tabOpen.toggle()
+                                //selectedTab = .home
                             }
                         }
                     RoundButton(type: "play.fill", size: 50)
@@ -36,7 +38,7 @@ struct SceneView: View {
             .padding(.vertical, 100)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image("0").resizable().scaledToFill())
+        .background(data.soundscape.image.resizable().scaledToFill())
         .ignoresSafeArea()
         
     }
@@ -47,6 +49,8 @@ struct SceneView_Previews: PreviewProvider {
     @State static var nowPlayingOpen = false
     @State static var selectedTab: Tab = .home
     static var previews: some View {
-        SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
+        //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen, soundscape: soundscapes[0])
+        SceneView(soundscape: soundscapes[1])
+            .environmentObject(AppData())
     }
 }

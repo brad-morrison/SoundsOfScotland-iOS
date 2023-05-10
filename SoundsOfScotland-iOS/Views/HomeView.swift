@@ -11,17 +11,19 @@ struct HomeView: View {
     @State var sceneIsOpen = false
     
     var body: some View {
-        ZStack {
-            
-            
-            ScrollView {
-                content
-                    .padding(.top, 60)
+        NavigationView {
+            ZStack {
+                
+                
+                ScrollView {
+                    content
+                        .padding(.top, 60)
+                }
+                
             }
-            
-        }
-        .ignoresSafeArea()
+            .ignoresSafeArea()
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        }
         
     }
         
