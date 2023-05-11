@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+
 
 struct SceneView: View {
     //@Binding var tabOpen: Bool
@@ -13,6 +16,11 @@ struct SceneView: View {
     //@Binding var nowPlayingOpen: Bool
     var soundscape: Soundscape
     @EnvironmentObject var data : AppData
+    @EnvironmentObject var audioManager : AudioManager
+    //
+    //@ObservedObject var audioManager = AudioManager()
+    //
+    
     var body: some View {
         ZStack {
             VStack {
@@ -32,6 +40,16 @@ struct SceneView: View {
                             }
                         }
                     RoundButton(type: "play.fill", size: 50)
+                        .onAppear {
+                            //
+                            let fileName = data.soundscape.path
+                            audioManager.loadAudio(filename: fileName)
+                            audioManager.playAudio()
+                            //
+                        }
+                        .onDisappear {
+                            audioManager.stopAudio()
+                        }
                     RoundButton(type: "star.fill", size: 30)
                 }
                     
@@ -41,6 +59,8 @@ struct SceneView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(data.soundscape.image.resizable().scaledToFill())
         .ignoresSafeArea()
+        
+
         
     }
 }

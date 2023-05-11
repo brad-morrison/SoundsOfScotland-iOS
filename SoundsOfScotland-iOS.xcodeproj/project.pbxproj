@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4658B68E2A0C7B9F0031BA65 /* audioFile.wav */; };
 		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
 		A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29CCF7028CA9F6D005A9091 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4658B68E2A0C7B9F0031BA65 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
 		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfScotland_iOSApp.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				A29CCF9928CAA0F6005A9091 /* Views */,
 				A29CCF9828CAA0E4005A9091 /* Components */,
 				A29CCF7028CA9F6D005A9091 /* Assets.xcassets */,
+				4658B68E2A0C7B9F0031BA65 /* audioFile.wav */,
 				A29CCF7A28CA9FA6005A9091 /* RiveAssets */,
 				A29CCF8B28CA9FB3005A9091 /* Fonts */,
 				A29CCF7228CA9F6D005A9091 /* Preview Content */,
@@ -256,6 +259,7 @@
 				A29CCF8328CA9FA6005A9091 /* house.riv in Resources */,
 				A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */,
 				A29CCF9128CA9FB3005A9091 /* Poppins-Bold.ttf in Resources */,
+				4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */,
 				A29CCF8828CA9FA6005A9091 /* shapes.riv in Resources */,
 				A29CCF9028CA9FB3005A9091 /* Inter-Regular.ttf in Resources */,
 				A29CCF8728CA9FA6005A9091 /* menu_button.riv in Resources */,

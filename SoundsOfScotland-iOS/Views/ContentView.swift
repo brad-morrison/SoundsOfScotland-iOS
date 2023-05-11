@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RiveRuntime
+import AVFoundation
 
 @MainActor class AppData : ObservableObject {
     @Published var soundscape = soundscapes[1]
@@ -16,9 +17,35 @@ import RiveRuntime
     @Published var selectedTab: Tab = .home
 }
 
+@MainActor class AudioManager : ObservableObject {
+    var audioPlayer : AVAudioPlayer?
+    
+    func loadAudio(filename: String) {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "wav") else {
+            print("[shark]", filename + " is not found")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            print("playing")
+        } catch {
+            print("[shark], audioPlayer cannot load", path, error)
+        }
+    }
+    
+    func playAudio() {
+        audioPlayer?.play()
+    }
+    
+    func stopAudio() {
+        audioPlayer?.stop()
+    }
+}
+
 struct ContentView: View {
     //@AppStorage("selectedTab") var selectedTab: Tab = .home
     @StateObject var data = AppData()
+    @StateObject var audioManager = AudioManager()
     //@State var isOpen = false
     //@State var tabOpen = true
     //@State var nowPlayingOpen = false
@@ -86,6 +113,7 @@ struct ContentView: View {
                 
             }
             .environmentObject(data)
+            .environmentObject(audioManager)
             .background(Color("Background Light"))
         }
         
