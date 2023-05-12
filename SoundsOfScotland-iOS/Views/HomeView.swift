@@ -17,7 +17,7 @@ struct HomeView: View {
                 
                 ScrollView {
                     content
-                        .padding(.top, 60)
+                        .padding(.top, 130)
                 }
                 
             }
@@ -37,7 +37,7 @@ let columns = [
 var content: some View {
     VStack(alignment: .leading, spacing: 0) {
         
-        title
+        //title
         new_Section
         featured_Section
         recent_Section

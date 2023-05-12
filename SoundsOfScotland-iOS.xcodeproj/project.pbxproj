@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */; };
 		4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4658B68E2A0C7B9F0031BA65 /* audioFile.wav */; };
 		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
 		4658B68E2A0C7B9F0031BA65 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
 		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 				A29CCFA328CAA141005A9091 /* SquareCard.swift */,
 				A29CCFA728CAA141005A9091 /* TabBar.swift */,
 				468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */,
+				46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
 				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
 				A29CCFAF28CAA141005A9091 /* SideMenu.swift in Sources */,
+				46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */,
 				A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */,
 				A29CCF9E28CAA12A005A9091 /* TitleView.swift in Sources */,
 				A29CCFAA28CAA141005A9091 /* SquareCard.swift in Sources */,

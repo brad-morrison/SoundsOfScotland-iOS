@@ -15,6 +15,8 @@ import AVFoundation
     @Published var settingsButtonStatus = false
     @Published var nowPlayingOpen = false
     @Published var selectedTab: Tab = .home
+    @Published var isPlaying = false
+    @Published var nowPlayingBarOpen = false
 }
 
 @MainActor class AudioManager : ObservableObject {
@@ -92,6 +94,42 @@ struct ContentView: View {
                             data.tabOpen.toggle()
                         }
                     }
+                
+                //
+                NowPlayingBar()
+                    .mask(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                    .offset(y: 448)
+                    // handle on if playing audio
+                    .onChange(of: data.isPlaying) { newValue in
+                        if (data.selectedTab != .nowPlaying) {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                //data.tabOpen.toggle()
+                                data.nowPlayingBarOpen.toggle()
+                            }
+                        }
+                        else {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                data.nowPlayingBarOpen = false
+                            }
+                        }
+                    }
+                    // handle on tab change
+                    .onChange(of: data.selectedTab) { newValue in
+                        if (data.selectedTab == .nowPlaying) {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                //data.tabOpen.toggle()
+                                data.nowPlayingBarOpen = false
+                            }
+                        }
+                        if (data.selectedTab != .nowPlaying) {
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                //data.tabOpen.toggle()
+                                data.nowPlayingBarOpen = true
+                            }
+                        }
+                    }
+                    .offset(y: data.nowPlayingBarOpen ? 0 : 448)
+                //
                 
                 TabBar()
                     .onChange(of: data.selectedTab) { newValue in

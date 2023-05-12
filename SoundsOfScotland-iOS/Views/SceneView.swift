@@ -46,6 +46,7 @@ struct SceneView: View {
                             audioManager.loadAudio(filename: fileName)
                             audioManager.playAudio()
                             //
+                            data.isPlaying = true
                         }
                         .onDisappear {
                             audioManager.stopAudio()
@@ -73,5 +74,6 @@ struct SceneView_Previews: PreviewProvider {
         //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen, soundscape: soundscapes[0])
         SceneView(soundscape: soundscapes[1])
             .environmentObject(AppData())
+            .environmentObject(AudioManager())
     }
 }
