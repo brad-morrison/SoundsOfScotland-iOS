@@ -12,9 +12,9 @@ import AVFoundation
 @MainActor class AppData : ObservableObject {
     @Published var soundscape = soundscapes[1]
     @Published var tabOpen = true
+    @Published var selectedTab: Tab = .home
     @Published var settingsButtonStatus = false
     @Published var nowPlayingOpen = false
-    @Published var selectedTab: Tab = .home
     @Published var isPlaying = false
     @Published var nowPlayingBarOpen = false
 }
@@ -45,9 +45,10 @@ import AVFoundation
 }
 
 struct ContentView: View {
+    
     //@AppStorage("selectedTab") var selectedTab: Tab = .home
     @StateObject var data = AppData()
-    @StateObject var audioManager = AudioManager()
+    @StateObject var globalAudio = AudioManager()
     //@State var isOpen = false
     //@State var tabOpen = true
     //@State var nowPlayingOpen = false
@@ -76,7 +77,7 @@ struct ContentView: View {
                             Text("Starred")
                         case .nowPlaying:
                             //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
-                            SceneView(soundscape: soundscapes[0])
+                            SceneView(soundscape: soundscapes[0], loadingNewScene: true)
                         }
                     }
                     
@@ -153,7 +154,7 @@ struct ContentView: View {
                     
                 }
                 .environmentObject(data)
-                .environmentObject(audioManager)
+                .environmentObject(globalAudio)
             .background(Color("Background Light"))
         }
         }

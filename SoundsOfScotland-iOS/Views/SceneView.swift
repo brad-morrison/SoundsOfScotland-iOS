@@ -8,18 +8,11 @@
 import SwiftUI
 import AVFoundation
 
-
-
 struct SceneView: View {
-    //@Binding var tabOpen: Bool
-    //@Binding var selectedTab: Tab
-    //@Binding var nowPlayingOpen: Bool
     var soundscape: Soundscape
+    var loadingNewScene = false
     @EnvironmentObject var data : AppData
-    @EnvironmentObject var audioManager : AudioManager
-    //
-    //@ObservedObject var audioManager = AudioManager()
-    //
+    @EnvironmentObject var globalAudio : AudioManager
     
     var body: some View {
         ZStack {
@@ -41,19 +34,37 @@ struct SceneView: View {
                         }
                     PlayButton(size: 60, iconSize: 50)
                         .onAppear {
+                            
+                            // load in new data if new scene
+                            if (data.soundscape.path != globalAudio.audioPlayer?.url?.deletingPathExtension().lastPathComponent)
+                            {
+                                print("new sound loaded")
+                                let fileName = data.soundscape.path
+                                globalAudio.loadAudio(filename: fileName)
+                            }
+                            else
+                            {
+                                print("same sound detected - not creating new sound")
+                            }
+                            
                             //
-                            let fileName = data.soundscape.path
-                            audioManager.loadAudio(filename: fileName)
-                            audioManager.playAudio()
-                            //
-                            data.isPlaying = true
+                            /*
+                            if (data.isPlaying == false)
+                            {
+                                let fileName = data.soundscape.path
+                                globalAudio.loadAudio(filename: fileName)
+                                globalAudio.playAudio()
+                                //
+                                data.isPlaying = true
+                            }
+                             */
                         }
                         .onTapGesture {
                             data.isPlaying.toggle()
                         }
                     
                         .onDisappear {
-                            audioManager.stopAudio()
+                            //globalAudio.stopAudio()
                         }
                     RoundButton(type: "star.fill", size: 30, iconSize: 32)
                 }
@@ -71,11 +82,7 @@ struct SceneView: View {
 }
 
 struct SceneView_Previews: PreviewProvider {
-    @State static var tabOpen = false
-    @State static var nowPlayingOpen = false
-    @State static var selectedTab: Tab = .home
     static var previews: some View {
-        //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen, soundscape: soundscapes[0])
         SceneView(soundscape: soundscapes[1])
             .environmentObject(AppData())
             .environmentObject(AudioManager())

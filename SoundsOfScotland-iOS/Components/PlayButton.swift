@@ -11,10 +11,20 @@ struct PlayButton: View {
     var size: CGFloat
     var iconSize: CGFloat
     @EnvironmentObject var data : AppData
+    @EnvironmentObject var globalAudio : AudioManager
     var body: some View {
         PlayButtonState()
             .onTapGesture {
-                data.isPlaying.toggle()
+                if (data.isPlaying)
+                {
+                    data.isPlaying = false
+                    globalAudio.stopAudio()
+                }
+                else
+                {
+                    data.isPlaying = true
+                    globalAudio.playAudio()
+                }
             }
         
     }

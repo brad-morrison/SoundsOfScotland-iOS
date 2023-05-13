@@ -13,8 +13,7 @@ struct LargeWideCard: View {
     @EnvironmentObject var data : AppData
     
     var body: some View {
-        NavigationLink(destination: SceneView(soundscape: soundscape)) {
-            Button {
+        Button {
                 if (!comingSoon) {
                     data.soundscape = soundscape // set current soundscape to this one
                     data.selectedTab = Tab.nowPlaying // switch view to SceneView
@@ -44,7 +43,7 @@ struct LargeWideCard: View {
                 .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 12)
             .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
         }
-        }
+        
 }
 }
 

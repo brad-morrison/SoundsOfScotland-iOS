@@ -13,7 +13,6 @@ struct RoundCard: View {
     
     var body: some View {
         
-        NavigationLink(destination: SceneView(soundscape: soundscape)) {
             Button {
                 
                 data.soundscape = soundscape // set current soundscape to this one
@@ -35,7 +34,7 @@ struct RoundCard: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
         }
-        }
+        
     }
 }
 

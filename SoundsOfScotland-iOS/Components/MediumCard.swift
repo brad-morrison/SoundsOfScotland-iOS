@@ -12,7 +12,6 @@ struct MediumCard: View {
     @EnvironmentObject var data : AppData
     
     var body: some View {
-        NavigationLink(destination: SceneView(soundscape: soundscape)) {
             Button {
                 
                 data.soundscape = soundscape // set current soundscape to this one
@@ -35,7 +34,7 @@ struct MediumCard: View {
                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 12)
         }
-        }
+        
     }
 }
 
