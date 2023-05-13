@@ -129,7 +129,8 @@ struct ContentView: View {
                                 }
                             }
                         }
-                        .offset(y: data.nowPlayingBarOpen ? 0 : 448)
+                        .offset(y: data.nowPlayingBarOpen ? 0 : 448) // offset if scene view open
+                        .offset(y: data.settingsButtonStatus ? 220 : 0) // offset if sidebar open
                     //
                     
                     TabBar()
