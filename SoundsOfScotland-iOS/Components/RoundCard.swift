@@ -20,7 +20,7 @@ struct RoundCard: View {
                 
             } label: {
                 VStack {
-                    soundscape.image
+                    Image(soundscape.image)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 120, height: 120)

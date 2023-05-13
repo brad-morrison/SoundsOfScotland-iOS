@@ -41,23 +41,14 @@ struct SceneView: View {
                                 print("new sound loaded")
                                 let fileName = data.soundscape.path
                                 globalAudio.loadAudio(filename: fileName)
+                                globalAudio.playAudio()
+                                data.isPlaying = true
                             }
                             else
                             {
                                 print("same sound detected - not creating new sound")
                             }
-                            
-                            //
-                            /*
-                            if (data.isPlaying == false)
-                            {
-                                let fileName = data.soundscape.path
-                                globalAudio.loadAudio(filename: fileName)
-                                globalAudio.playAudio()
-                                //
-                                data.isPlaying = true
-                            }
-                             */
+                    
                         }
                         .onTapGesture {
                             data.isPlaying.toggle()
@@ -66,14 +57,14 @@ struct SceneView: View {
                         .onDisappear {
                             //globalAudio.stopAudio()
                         }
-                    RoundButton(type: "star.fill", size: 30, iconSize: 32)
+                    FavButton(size: 30, iconSize: 32)
                 }
                     
             }
             .padding(.vertical, 100)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(data.soundscape.image.resizable().scaledToFill())
+        .background(Image(data.soundscape.image).resizable().scaledToFill())
         .ignoresSafeArea()
         
 

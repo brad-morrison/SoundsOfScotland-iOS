@@ -27,7 +27,7 @@ struct MediumCard: View {
                 .frame(maxWidth: .infinity, maxHeight: 110)
                 .foregroundColor(.white)
                 .background(
-                    soundscape.image
+                    Image(soundscape.image)
                         .resizable()
                         .scaledToFill()
                 )

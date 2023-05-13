@@ -45,14 +45,13 @@ import AVFoundation
 }
 
 struct ContentView: View {
-    
-    //@AppStorage("selectedTab") var selectedTab: Tab = .home
+    @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @StateObject var data = AppData()
     @StateObject var globalAudio = AudioManager()
-    //@State var isOpen = false
-    //@State var tabOpen = true
-    //@State var nowPlayingOpen = false
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     var body: some View {
         
@@ -76,8 +75,12 @@ struct ContentView: View {
                         case .starred:
                             Text("Starred")
                         case .nowPlaying:
-                            //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
                             SceneView(soundscape: soundscapes[0], loadingNewScene: true)
+                            /*List {
+                                ForEach(ss, id: \.id) { s in
+                                    Text(s.title)
+                                }
+                            }*/
                         }
                     }
                     
@@ -155,11 +158,16 @@ struct ContentView: View {
                 }
                 .environmentObject(data)
                 .environmentObject(globalAudio)
-            .background(Color("Background Light"))
+                .background(Color("Background Light"))
+                .onAppear {
+                    if (isFirstLaunch) { populateDataOnFirstLaunch() }
+                }
         }
         }
         
-    
+    func populateDataOnFirstLaunch() {
+        print("building data as it is first launch")
+    }
     
 }
 

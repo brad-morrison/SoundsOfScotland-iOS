@@ -33,7 +33,7 @@ struct LargeWideCard: View {
                 .frame(height: 240)
                 
                 .background(
-                    soundscape.image
+                    Image(soundscape.image)
                         .resizable()
                         .scaledToFill()
                         .saturation(comingSoon ? 0 : 1)

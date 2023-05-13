@@ -31,7 +31,7 @@ struct LargeCard: View {
                 .frame(width: 260, height: 310)
                 
                 .background(
-                    soundscape.image
+                    Image(soundscape.image)
                         .resizable()
                         .scaledToFill()
                 )

@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */; };
+		465630072A104CCB000722CE /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465630062A104CCB000722CE /* PersistanceController.swift */; };
+		4656300A2A104D6E000722CE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 465630082A104D6E000722CE /* Model.xcdatamodeld */; };
 		4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4658B68E2A0C7B9F0031BA65 /* audioFile.wav */; };
+		4659C2EB2A0FC676009DA85C /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */; };
+		4659C2ED2A0FC862009DA85C /* FavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659C2EC2A0FC862009DA85C /* FavButton.swift */; };
 		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		46F112B12A0F8FBF003E17A8 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F112B02A0F8FBF003E17A8 /* PlayButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
@@ -43,7 +47,11 @@
 
 /* Begin PBXFileReference section */
 		46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
+		465630062A104CCB000722CE /* PersistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
+		465630092A104D6E000722CE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4658B68E2A0C7B9F0031BA65 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
+		4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
+		4659C2EC2A0FC862009DA85C /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
 		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		46F112B02A0F8FBF003E17A8 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +122,7 @@
 				A29CCF9928CAA0F6005A9091 /* Views */,
 				A29CCF9828CAA0E4005A9091 /* Components */,
 				A29CCF7028CA9F6D005A9091 /* Assets.xcassets */,
+				4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */,
 				4658B68E2A0C7B9F0031BA65 /* audioFile.wav */,
 				A29CCF7A28CA9FA6005A9091 /* RiveAssets */,
 				A29CCF8B28CA9FB3005A9091 /* Fonts */,
@@ -169,6 +178,7 @@
 				468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */,
 				46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */,
 				46F112B02A0F8FBF003E17A8 /* PlayButton.swift */,
+				4659C2EC2A0FC862009DA85C /* FavButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				A29CCFB128CAA155005A9091 /* Soundscapes.swift */,
+				465630062A104CCB000722CE /* PersistanceController.swift */,
+				465630082A104D6E000722CE /* Model.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +277,7 @@
 				A29CCF8328CA9FA6005A9091 /* house.riv in Resources */,
 				A29CCF7128CA9F6D005A9091 /* Assets.xcassets in Resources */,
 				A29CCF9128CA9FB3005A9091 /* Poppins-Bold.ttf in Resources */,
+				4659C2EB2A0FC676009DA85C /* tentsmuir_forest.wav in Resources */,
 				4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */,
 				A29CCF8828CA9FA6005A9091 /* shapes.riv in Resources */,
 				A29CCF9028CA9FB3005A9091 /* Inter-Regular.ttf in Resources */,
@@ -280,17 +293,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465630072A104CCB000722CE /* PersistanceController.swift in Sources */,
 				A29CCF9228CA9FB3005A9091 /* CustomFont.swift in Sources */,
 				A29CCFA028CAA12A005A9091 /* ContentView.swift in Sources */,
 				A29CCFB228CAA155005A9091 /* Soundscapes.swift in Sources */,
 				A29CCFA928CAA141005A9091 /* RoundCard.swift in Sources */,
 				A29CCFAE28CAA141005A9091 /* TabBar.swift in Sources */,
 				A29CCFAC28CAA141005A9091 /* LargeCard.swift in Sources */,
+				4656300A2A104D6E000722CE /* Model.xcdatamodeld in Sources */,
 				46F112B12A0F8FBF003E17A8 /* PlayButton.swift in Sources */,
 				468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */,
 				A29CCFAB28CAA141005A9091 /* MediumCard.swift in Sources */,
 				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
 				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
+				4659C2ED2A0FC862009DA85C /* FavButton.swift in Sources */,
 				A29CCFAF28CAA141005A9091 /* SideMenu.swift in Sources */,
 				46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */,
 				A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */,
@@ -518,6 +534,19 @@
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		465630082A104D6E000722CE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				465630092A104D6E000722CE /* Model.xcdatamodel */,
+			);
+			currentVersion = 465630092A104D6E000722CE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A29CCF6128CA9F6D005A9091 /* Project object */;
 }

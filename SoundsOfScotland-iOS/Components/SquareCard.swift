@@ -31,7 +31,7 @@ struct SquareCard: View {
                 .frame(width: .infinity, height: 180)
                 .foregroundColor(.white)
                 .background(
-                    soundscape.image
+                    Image(soundscape.image)
                         .resizable()
                         .scaledToFill()
                 )

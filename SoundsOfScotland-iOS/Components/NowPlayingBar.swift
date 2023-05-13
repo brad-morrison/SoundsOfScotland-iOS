@@ -23,7 +23,7 @@ struct NowPlayingBar: View {
             .padding(.horizontal, 25)
             .padding(.vertical, 13)
             .background {
-                data.soundscape.image
+                Image(data.soundscape.image)
                     .resizable()
                     .scaledToFill()
                     .blur(radius: 3)
