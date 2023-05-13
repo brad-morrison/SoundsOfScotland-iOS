@@ -75,12 +75,12 @@ struct ContentView: View {
                         case .starred:
                             Text("Starred")
                         case .nowPlaying:
-                            SceneView(soundscape: soundscapes[0], loadingNewScene: true)
-                            /*List {
-                                ForEach(ss, id: \.id) { s in
-                                    Text(s.title)
+                            //SceneView(soundscape: soundscapes[0], loadingNewScene: true)
+                            List {
+                                ForEach(places, id:\.self) { place in
+                                    Text("\(place.title ?? "Uknown")")
                                 }
-                            }*/
+                            }
                         }
                     }
                     
@@ -160,7 +160,16 @@ struct ContentView: View {
                 .environmentObject(globalAudio)
                 .background(Color("Background Light"))
                 .onAppear {
-                    if (isFirstLaunch) { populateDataOnFirstLaunch() }
+                    //if (isFirstLaunch) { populateDataOnFirstLaunch() }
+                    populateDataOnFirstLaunch()
+                    for soundscape in soundscapes {
+                        let place = Place(context: managedObjectContext)
+                        place.id = soundscape.id
+                        place.title = soundscape.title
+                        place.image = soundscape.image
+                        place.path = soundscape.path
+                        place.starred = soundscape.fav
+                    }
                 }
         }
         }
