@@ -11,7 +11,7 @@ struct HomeView: View {
     @State var sceneIsOpen = false
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             ZStack {
                 
                 
@@ -23,7 +23,7 @@ struct HomeView: View {
             }
             .ignoresSafeArea()
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        }
+        //}
         
     }
         

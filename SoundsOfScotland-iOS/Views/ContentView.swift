@@ -55,104 +55,106 @@ struct ContentView: View {
     
     var body: some View {
         
+        NavigationView {
             ZStack {
-                SideMenu()
-                    .opacity(data.settingsButtonStatus ? 1 : 0)
-                    .offset(x: data.settingsButtonStatus ? 0 : -300)
-                    .rotation3DEffect(.degrees(data.settingsButtonStatus ? 0 : 30), axis: (x:0 , y: 1, z: 0))
-                
-                Group {
-                    switch data.selectedTab {
-                    case .home:
-                        HomeView()
-                            .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
-                            .offset(x: data.settingsButtonStatus ? 265 : 0)
-                            .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
-                            .ignoresSafeArea()
-                    case .categories:
-                        Text("Categories")
-                    case .starred:
-                        Text("Starred")
-                    case .nowPlaying:
-                        //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
-                        SceneView(soundscape: soundscapes[0])
-                    }
-                }
-                
-                button.view()
-                    .frame(width: 44, height: 44)
-                    .mask(Circle())
-                    .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    .padding()
-                    .offset(x: data.settingsButtonStatus ? 220 : 0)
-                    .offset(x: data.nowPlayingOpen ? -80 : 0)
-                    .onTapGesture {
-                        button.setInput("data.settingsButtonStatus", value: data.settingsButtonStatus)
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                            data.settingsButtonStatus.toggle()
-                            data.tabOpen.toggle()
-                        }
-                    }
-                
-                //
-                NowPlayingBar()
-                    .mask(RoundedRectangle(cornerRadius: 40, style: .continuous))
-                    .offset(y: 448)
-                    // handle on if playing audio
-                    .onChange(of: data.isPlaying) { newValue in
-                        if (data.selectedTab != .nowPlaying) {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                //data.tabOpen.toggle()
-                                data.nowPlayingBarOpen.toggle()
-                            }
-                        }
-                        else {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                data.nowPlayingBarOpen = false
-                            }
-                        }
-                    }
-                    // handle on tab change
-                    .onChange(of: data.selectedTab) { newValue in
-                        if (data.selectedTab == .nowPlaying) {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                //data.tabOpen.toggle()
-                                data.nowPlayingBarOpen = false
-                            }
-                        }
-                        if (data.selectedTab != .nowPlaying) {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                //data.tabOpen.toggle()
-                                data.nowPlayingBarOpen = true
-                            }
-                        }
-                    }
-                    .offset(y: data.nowPlayingBarOpen ? 0 : 448)
-                //
-                
-                TabBar()
-                    .onChange(of: data.selectedTab) { newValue in
-                        if (data.selectedTab == .nowPlaying) {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                data.tabOpen.toggle()
-                                data.nowPlayingOpen.toggle()
-                            }
-                        }
-                        else {
-                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                                data.nowPlayingOpen = false
-                            }
-                        }
-                    }
-                    .offset(y: data.tabOpen ? 0 : 120)
+                    SideMenu()
+                        .opacity(data.settingsButtonStatus ? 1 : 0)
+                        .offset(x: data.settingsButtonStatus ? 0 : -300)
+                        .rotation3DEffect(.degrees(data.settingsButtonStatus ? 0 : 30), axis: (x:0 , y: 1, z: 0))
                     
-                
-                
-            }
-            .environmentObject(data)
-            .environmentObject(audioManager)
+                    Group {
+                        switch data.selectedTab {
+                        case .home:
+                            HomeView()
+                                .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
+                                .offset(x: data.settingsButtonStatus ? 265 : 0)
+                                .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
+                                .ignoresSafeArea()
+                        case .categories:
+                            Text("Categories")
+                        case .starred:
+                            Text("Starred")
+                        case .nowPlaying:
+                            //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)
+                            SceneView(soundscape: soundscapes[0])
+                        }
+                    }
+                    
+                    button.view()
+                        .frame(width: 44, height: 44)
+                        .mask(Circle())
+                        .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .padding()
+                        .offset(x: data.settingsButtonStatus ? 220 : 0)
+                        .offset(x: data.nowPlayingOpen ? -80 : 0)
+                        .onTapGesture {
+                            button.setInput("data.settingsButtonStatus", value: data.settingsButtonStatus)
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                data.settingsButtonStatus.toggle()
+                                data.tabOpen.toggle()
+                            }
+                        }
+                    
+                    //
+                    NowPlayingBar()
+                        .mask(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                        .offset(y: 448)
+                        // handle on if playing audio
+                        .onChange(of: data.isPlaying) { newValue in
+                            if (data.selectedTab != .nowPlaying) {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    //data.tabOpen.toggle()
+                                    data.nowPlayingBarOpen = true
+                                }
+                            }
+                            else {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    data.nowPlayingBarOpen = false
+                                }
+                            }
+                        }
+                        // handle on tab change
+                        .onChange(of: data.selectedTab) { newValue in
+                            if (data.selectedTab == .nowPlaying) {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    //data.tabOpen.toggle()
+                                    data.nowPlayingBarOpen = false
+                                }
+                            }
+                            if (data.selectedTab != .nowPlaying) {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    //data.tabOpen.toggle()
+                                    data.nowPlayingBarOpen = true
+                                }
+                            }
+                        }
+                        .offset(y: data.nowPlayingBarOpen ? 0 : 448)
+                    //
+                    
+                    TabBar()
+                        .onChange(of: data.selectedTab) { newValue in
+                            if (data.selectedTab == .nowPlaying) {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    data.tabOpen.toggle()
+                                    data.nowPlayingOpen.toggle()
+                                }
+                            }
+                            else {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                    data.nowPlayingOpen = false
+                                }
+                            }
+                        }
+                        .offset(y: data.tabOpen ? 0 : 120)
+                        
+                    
+                    
+                }
+                .environmentObject(data)
+                .environmentObject(audioManager)
             .background(Color("Background Light"))
+        }
         }
         
     

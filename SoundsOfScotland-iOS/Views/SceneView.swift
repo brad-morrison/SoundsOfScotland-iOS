@@ -31,7 +31,7 @@ struct SceneView: View {
                 Spacer()
                 
                 HStack {
-                    RoundButton(type: "chevron.backward", size: 30)
+                    RoundButton(type: "chevron.backward", size: 30, iconSize: 32)
                         .onTapGesture {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                 data.tabOpen.toggle()
@@ -39,7 +39,7 @@ struct SceneView: View {
                                 data.selectedTab = .home
                             }
                         }
-                    RoundButton(type: "play.fill", size: 50)
+                    PlayButton(size: 60, iconSize: 50)
                         .onAppear {
                             //
                             let fileName = data.soundscape.path
@@ -48,10 +48,14 @@ struct SceneView: View {
                             //
                             data.isPlaying = true
                         }
+                        .onTapGesture {
+                            data.isPlaying.toggle()
+                        }
+                    
                         .onDisappear {
                             audioManager.stopAudio()
                         }
-                    RoundButton(type: "star.fill", size: 30)
+                    RoundButton(type: "star.fill", size: 30, iconSize: 32)
                 }
                     
             }
