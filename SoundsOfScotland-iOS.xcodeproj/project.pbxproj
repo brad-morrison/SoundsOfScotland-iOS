@@ -13,6 +13,7 @@
 		4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4658B68E2A0C7B9F0031BA65 /* audioFile.wav */; };
 		4659C2EB2A0FC676009DA85C /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */; };
 		4659C2ED2A0FC862009DA85C /* FavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659C2EC2A0FC862009DA85C /* FavButton.swift */; };
+		4674679E2A11952C00351A33 /* NewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674679D2A11952C00351A33 /* NewSection.swift */; };
 		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		46F112B12A0F8FBF003E17A8 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F112B02A0F8FBF003E17A8 /* PlayButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
@@ -52,6 +53,7 @@
 		4658B68E2A0C7B9F0031BA65 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
 		4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
 		4659C2EC2A0FC862009DA85C /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
+		4674679D2A11952C00351A33 /* NewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSection.swift; sourceTree = "<group>"; };
 		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		46F112B02A0F8FBF003E17A8 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4674679C2A11950F00351A33 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				4674679D2A11952C00351A33 /* NewSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
 		A29CCF6028CA9F6D005A9091 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */,
 				A29CCFB028CAA148005A9091 /* Model */,
 				A29CCF9928CAA0F6005A9091 /* Views */,
+				4674679C2A11950F00351A33 /* Sections */,
 				A29CCF9828CAA0E4005A9091 /* Components */,
 				A29CCF7028CA9F6D005A9091 /* Assets.xcassets */,
 				4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */,
@@ -307,6 +318,7 @@
 				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
 				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
 				4659C2ED2A0FC862009DA85C /* FavButton.swift in Sources */,
+				4674679E2A11952C00351A33 /* NewSection.swift in Sources */,
 				A29CCFAF28CAA141005A9091 /* SideMenu.swift in Sources */,
 				46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */,
 				A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */,
