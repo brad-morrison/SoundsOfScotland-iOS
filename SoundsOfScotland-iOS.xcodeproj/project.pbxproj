@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */; };
-		465630072A104CCB000722CE /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465630062A104CCB000722CE /* PersistanceController.swift */; };
+		465630072A104CCB000722CE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465630062A104CCB000722CE /* Persistence.swift */; };
 		4656300A2A104D6E000722CE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 465630082A104D6E000722CE /* Model.xcdatamodeld */; };
 		4658B68F2A0C7B9F0031BA65 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4658B68E2A0C7B9F0031BA65 /* audioFile.wav */; };
 		4659C2EB2A0FC676009DA85C /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */; };
@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		46405D982A0DA0BA0099D404 /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
-		465630062A104CCB000722CE /* PersistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
+		465630062A104CCB000722CE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		465630092A104D6E000722CE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4658B68E2A0C7B9F0031BA65 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
 		4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A29CCFB128CAA155005A9091 /* Soundscapes.swift */,
-				465630062A104CCB000722CE /* PersistanceController.swift */,
+				465630062A104CCB000722CE /* Persistence.swift */,
 				465630082A104D6E000722CE /* Model.xcdatamodeld */,
 			);
 			path = Model;
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465630072A104CCB000722CE /* PersistanceController.swift in Sources */,
+				465630072A104CCB000722CE /* Persistence.swift in Sources */,
 				A29CCF9228CA9FB3005A9091 /* CustomFont.swift in Sources */,
 				A29CCFA028CAA12A005A9091 /* ContentView.swift in Sources */,
 				A29CCFB228CAA155005A9091 /* Soundscapes.swift in Sources */,

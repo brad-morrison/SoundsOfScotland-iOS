@@ -10,17 +10,17 @@ import SwiftUI
 @main
 struct SoundsOfScotland_iOSApp: App {
     
-    let persistanceController = PersitanceController.shared
+    let persistenceController = PersistenceController.shared
     
     @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistanceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .onChange(of: scenePhase) {  (newScenePhase) in
-            persistanceController.save()
+            //persistenceController.save()
         }
         
     }

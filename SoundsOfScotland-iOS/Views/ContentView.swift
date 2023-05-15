@@ -52,8 +52,12 @@ struct ContentView: View {
     @StateObject var globalAudio = AudioManager()
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
+    // CoreData
     @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    @FetchRequest(
+        entity: Place.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)])
+    var places: FetchedResults<Place>
     
     var body: some View {
         
@@ -67,9 +71,9 @@ struct ContentView: View {
                     Group {
                         switch data.selectedTab {
                         case .home:
-                            //TestView()
+                            TestView()
                             
-                            HomeView()
+                            //HomeView()
                                 .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
                                 .offset(x: data.settingsButtonStatus ? 265 : 0)
                                 .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
@@ -188,6 +192,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             .previewDevice("iPhone 13 Pro Max")
     }
 }

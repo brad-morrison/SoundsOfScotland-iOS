@@ -13,9 +13,17 @@ struct TestView: View {
     @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     var body: some View {
-        VStack {
-            ForEach(places, id: \.self) { place in
-                Text(place.title  ?? "a")
+        ScrollView {
+            VStack() {
+                ForEach(places, id: \.self) { place in
+                    VStack {
+                        Text(place.title  ?? "a")
+                        Image(place.image ?? "0")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                    
+                }
             }
         }
     }
