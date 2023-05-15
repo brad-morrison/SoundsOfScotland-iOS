@@ -12,6 +12,8 @@ struct LargeWideCard: View {
     var soundscape: Soundscape
     @EnvironmentObject var data : AppData
     
+    var place: Place
+    
     var body: some View {
         Button {
                 if (!comingSoon) {
@@ -22,7 +24,7 @@ struct LargeWideCard: View {
                 VStack(alignment: .leading, spacing: 8) {
                     
                     Spacer()
-                    Text(soundscape.title)
+                    Text(place.title ?? "a")
                         .customFont(.title2)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .layoutPriority(1)
@@ -33,7 +35,7 @@ struct LargeWideCard: View {
                 .frame(height: 240)
                 
                 .background(
-                    Image(soundscape.image)
+                    Image(place.image  ?? "a")
                         .resizable()
                         .scaledToFill()
                         .saturation(comingSoon ? 0 : 1)
@@ -47,9 +49,10 @@ struct LargeWideCard: View {
 }
 }
 
+/*
 struct LargeWideCard_Previews: PreviewProvider {
     static var previews: some View {
         LargeWideCard(soundscape: soundscapes[0])
             .environmentObject(AppData())
     }
-}
+}*/

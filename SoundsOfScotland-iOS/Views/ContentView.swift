@@ -44,6 +44,8 @@ import AVFoundation
     }
 }
 
+
+
 struct ContentView: View {
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @StateObject var data = AppData()
@@ -65,11 +67,14 @@ struct ContentView: View {
                     Group {
                         switch data.selectedTab {
                         case .home:
+                            //TestView()
+                            
                             HomeView()
                                 .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
                                 .offset(x: data.settingsButtonStatus ? 265 : 0)
                                 .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
                                 .ignoresSafeArea()
+                             
                         case .categories:
                             Text("Categories")
                         case .starred:

@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct LargeCard: View {
-    var soundscape: Soundscape
+    //var soundscape: Soundscape
     @EnvironmentObject var data : AppData
+    var place: Place
     var body: some View {
         
             Button {
                 
-                data.soundscape = soundscape // set current soundscape to this one
-                data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                //data.soundscape = soundscape // set current soundscape to this one
+                //data.selectedTab = Tab.nowPlaying // switch view to SceneView
                 
             } label:  {
                 VStack(alignment: .leading, spacing: 8) {
                     
                     Spacer()
-                    Text(soundscape.title)
+                    Text(place.title ?? "def")
                         .customFont(.title2)
                         .frame(maxWidth: 170, alignment: .leading)
                         .layoutPriority(1)
@@ -31,7 +32,7 @@ struct LargeCard: View {
                 .frame(width: 260, height: 310)
                 
                 .background(
-                    Image(soundscape.image)
+                    Image(place.image ?? "def")
                         .resizable()
                         .scaledToFill()
                 )
@@ -45,10 +46,10 @@ struct LargeCard: View {
     }
 }
 
-
+/*
 struct LargeCard_Previews: PreviewProvider {
     static var previews: some View {
-        LargeCard(soundscape: soundscapes[0])
+        LargeCard(place: )
             .environmentObject(AppData())
     }
-}
+}*/

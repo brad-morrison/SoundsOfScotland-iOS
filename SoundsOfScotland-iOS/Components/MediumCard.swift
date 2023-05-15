@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MediumCard: View {
     var soundscape: Soundscape
+    var place: Place
     @EnvironmentObject var data : AppData
     
     var body: some View {
@@ -19,7 +20,7 @@ struct MediumCard: View {
                 
             } label:  {
                 HStack(spacing: 20) {
-                    Text(soundscape.title)
+                    Text(place.title ?? "a")
                             .customFont(.title3)
                             .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -27,7 +28,7 @@ struct MediumCard: View {
                 .frame(maxWidth: .infinity, maxHeight: 110)
                 .foregroundColor(.white)
                 .background(
-                    Image(soundscape.image)
+                    Image(place.image ?? "a")
                         .resizable()
                         .scaledToFill()
                 )
@@ -38,8 +39,9 @@ struct MediumCard: View {
     }
 }
 
+/*
 struct MediumCard_Previews: PreviewProvider {
     static var previews: some View {
         MediumCard(soundscape: soundscapes[0])
     }
-}
+}*/

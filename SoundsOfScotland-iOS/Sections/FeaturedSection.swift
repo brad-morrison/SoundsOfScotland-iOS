@@ -1,5 +1,5 @@
 //
-//  NewSection.swift
+//  FeaturedSection.swift
 //  SoundsOfScotland-iOS
 //
 //  Created by Bradley Morrison on 14/05/2023.
@@ -7,28 +7,33 @@
 
 import SwiftUI
 
-struct NewSection: View {
-    
+struct FeaturedSection: View {
     var places: FetchedResults<Place>
-    
     var body: some View {
-        // title
         VStack(spacing: 0) {
-            Text("New")
+            // title
+            Text("Featured")
                 .customFont(.title3)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
             
             // large featured cards
-            LargeWideCard(soundscape: soundscapes[6], place: places[0])
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    ForEach(places) { place in
+                        LargeCard(place: place)
+                    }
+                }
                 .padding(20)
+                .padding(.bottom, 10)
+            }
         }
     }
 }
 
 /*
-struct NewSection_Previews: PreviewProvider {
+struct FeaturedSection_Previews: PreviewProvider {
     static var previews: some View {
-        NewSection()
+        FeaturedSection()
     }
-} */
+}*/

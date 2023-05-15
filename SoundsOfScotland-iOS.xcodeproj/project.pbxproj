@@ -14,6 +14,12 @@
 		4659C2EB2A0FC676009DA85C /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */; };
 		4659C2ED2A0FC862009DA85C /* FavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659C2EC2A0FC862009DA85C /* FavButton.swift */; };
 		4674679E2A11952C00351A33 /* NewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674679D2A11952C00351A33 /* NewSection.swift */; };
+		467467A02A11966000351A33 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674679F2A11966000351A33 /* FeaturedSection.swift */; };
+		467467A42A1196C000351A33 /* RecentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467467A32A1196C000351A33 /* RecentSection.swift */; };
+		467467A62A1196F200351A33 /* TrySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467467A52A1196F200351A33 /* TrySection.swift */; };
+		467467A82A11971500351A33 /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467467A72A11971500351A33 /* ExploreSection.swift */; };
+		467467AA2A11974500351A33 /* ComingSoonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467467A92A11974500351A33 /* ComingSoonSection.swift */; };
+		467467AC2A119AFB00351A33 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467467AB2A119AFB00351A33 /* TestView.swift */; };
 		468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */; };
 		46F112B12A0F8FBF003E17A8 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F112B02A0F8FBF003E17A8 /* PlayButton.swift */; };
 		A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29CCF6C28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift */; };
@@ -54,6 +60,12 @@
 		4659C2EA2A0FC676009DA85C /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
 		4659C2EC2A0FC862009DA85C /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
 		4674679D2A11952C00351A33 /* NewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSection.swift; sourceTree = "<group>"; };
+		4674679F2A11966000351A33 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
+		467467A32A1196C000351A33 /* RecentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSection.swift; sourceTree = "<group>"; };
+		467467A52A1196F200351A33 /* TrySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrySection.swift; sourceTree = "<group>"; };
+		467467A72A11971500351A33 /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
+		467467A92A11974500351A33 /* ComingSoonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonSection.swift; sourceTree = "<group>"; };
+		467467AB2A119AFB00351A33 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		468E5E0B2A09B7CB00ACF617 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		46F112B02A0F8FBF003E17A8 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		A29CCF6928CA9F6D005A9091 /* SoundsOfScotland-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundsOfScotland-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				4674679D2A11952C00351A33 /* NewSection.swift */,
+				4674679F2A11966000351A33 /* FeaturedSection.swift */,
+				467467A32A1196C000351A33 /* RecentSection.swift */,
+				467467A52A1196F200351A33 /* TrySection.swift */,
+				467467A72A11971500351A33 /* ExploreSection.swift */,
+				467467A92A11974500351A33 /* ComingSoonSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -179,8 +196,8 @@
 		A29CCF9828CAA0E4005A9091 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A29CCFA528CAA141005A9091 /* LargeCard.swift */,
 				A29CCFA628CAA141005A9091 /* LargeWideCard.swift */,
+				A29CCFA528CAA141005A9091 /* LargeCard.swift */,
 				A29CCFA428CAA141005A9091 /* MediumCard.swift */,
 				A29CCFA228CAA141005A9091 /* RoundCard.swift */,
 				A29CCFA828CAA141005A9091 /* SideMenu.swift */,
@@ -201,6 +218,7 @@
 				A29CCF9B28CAA12A005A9091 /* HomeView.swift */,
 				A29CCF9D28CAA12A005A9091 /* SceneView.swift */,
 				A29CCF9A28CAA12A005A9091 /* TitleView.swift */,
+				467467AB2A119AFB00351A33 /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,11 +327,14 @@
 				A29CCFA028CAA12A005A9091 /* ContentView.swift in Sources */,
 				A29CCFB228CAA155005A9091 /* Soundscapes.swift in Sources */,
 				A29CCFA928CAA141005A9091 /* RoundCard.swift in Sources */,
+				467467A02A11966000351A33 /* FeaturedSection.swift in Sources */,
 				A29CCFAE28CAA141005A9091 /* TabBar.swift in Sources */,
 				A29CCFAC28CAA141005A9091 /* LargeCard.swift in Sources */,
 				4656300A2A104D6E000722CE /* Model.xcdatamodeld in Sources */,
 				46F112B12A0F8FBF003E17A8 /* PlayButton.swift in Sources */,
 				468E5E0C2A09B7CB00ACF617 /* RoundButton.swift in Sources */,
+				467467AA2A11974500351A33 /* ComingSoonSection.swift in Sources */,
+				467467A42A1196C000351A33 /* RecentSection.swift in Sources */,
 				A29CCFAB28CAA141005A9091 /* MediumCard.swift in Sources */,
 				A29CCF9F28CAA12A005A9091 /* HomeView.swift in Sources */,
 				A29CCF6D28CA9F6D005A9091 /* SoundsOfScotland_iOSApp.swift in Sources */,
@@ -323,8 +344,11 @@
 				46405D992A0DA0BA0099D404 /* NowPlayingBar.swift in Sources */,
 				A29CCFAD28CAA141005A9091 /* LargeWideCard.swift in Sources */,
 				A29CCF9E28CAA12A005A9091 /* TitleView.swift in Sources */,
+				467467A82A11971500351A33 /* ExploreSection.swift in Sources */,
 				A29CCFAA28CAA141005A9091 /* SquareCard.swift in Sources */,
+				467467AC2A119AFB00351A33 /* TestView.swift in Sources */,
 				A29CCFA128CAA12A005A9091 /* SceneView.swift in Sources */,
+				467467A62A1196F200351A33 /* TrySection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
