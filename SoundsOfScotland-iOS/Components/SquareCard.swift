@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct SquareCard: View {
-    var soundscape: Soundscape
+    var place: Place
     @EnvironmentObject var data : AppData
     
     var body: some View {
         Button {
                 
-                data.soundscape = soundscape // set current soundscape to this one
-                data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                //data.soundscape = soundscape // set current soundscape to this one
+                //data.selectedTab = Tab.nowPlaying // switch view to SceneView
                 
             } label: {
                 HStack(spacing: 20) {
                     VStack {
                         Spacer()
                         
-                        Text(soundscape.title)
+                        Text(place.title ?? "")
                                 .customFont(.title3)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -31,7 +31,7 @@ struct SquareCard: View {
                 .frame(width: .infinity, height: 180)
                 .foregroundColor(.white)
                 .background(
-                    Image(soundscape.image)
+                    Image(place.image ?? "")
                         .resizable()
                         .scaledToFill()
                 )
@@ -44,6 +44,6 @@ struct SquareCard: View {
 
 struct SquareCard_Previews: PreviewProvider {
     static var previews: some View {
-        SquareCard(soundscape: soundscapes[3])
+        SquareCard(place: dummyPlace())
     }
 }

@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct TrySection: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
     var body: some View {
         VStack(spacing: 0) {
             // title
             Text("Try something new")
                 .customFont(.title3)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
+                .padding(.horizontal, 20)
             
             // round cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(soundscapes) { soundscape in
-                        RoundCard(soundscape: soundscape)
+                    ForEach(places) { place in
+                        RoundCard(place: place)
                     }
                 }
                 .padding(20)
@@ -33,5 +36,6 @@ struct TrySection: View {
 struct TrySection_Previews: PreviewProvider {
     static var previews: some View {
         TrySection()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

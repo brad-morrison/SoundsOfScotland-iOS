@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExploreSection: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
     var body: some View {
         VStack(spacing: 0) {
             // title
@@ -18,8 +21,8 @@ struct ExploreSection: View {
             
             // square cards
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(soundscapes) { soundscape in
-                    SquareCard(soundscape: soundscape)
+                ForEach(places) { place in
+                    SquareCard(place: place)
                 }
             }
             .padding(20)
@@ -30,5 +33,6 @@ struct ExploreSection: View {
 struct ExploreSection_Previews: PreviewProvider {
     static var previews: some View {
         ExploreSection()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

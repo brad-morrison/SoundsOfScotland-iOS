@@ -71,9 +71,9 @@ struct ContentView: View {
                     Group {
                         switch data.selectedTab {
                         case .home:
-                            TestView()
+                            //TestView()
                             
-                            //HomeView()
+                            HomeView()
                                 .rotation3DEffect(.degrees(data.settingsButtonStatus ? 30 : 0), axis: (x: 0, y: -1, z: 0))
                                 .offset(x: data.settingsButtonStatus ? 265 : 0)
                                 .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)

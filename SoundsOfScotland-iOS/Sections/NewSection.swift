@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewSection: View {
-    
-    var places: FetchedResults<Place>
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     var body: some View {
         // title
@@ -20,15 +20,16 @@ struct NewSection: View {
                 .padding(.horizontal, 20)
             
             // large featured cards
-            LargeWideCard(soundscape: soundscapes[6], place: places[0])
+            LargeWideCard(place: places[0])
                 .padding(20)
         }
     }
 }
 
-/*
+
 struct NewSection_Previews: PreviewProvider {
     static var previews: some View {
         NewSection()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-} */
+}

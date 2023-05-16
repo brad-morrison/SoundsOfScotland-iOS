@@ -18,9 +18,9 @@ struct HomeView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         
-                        NewSection(places: places)
-                        FeaturedSection(places: places)
-                        RecentSection(places: places)
+                        NewSection()
+                        FeaturedSection()
+                        RecentSection()
                         TrySection()
                         ExploreSection()
                         ComingSoonSection()
@@ -45,5 +45,6 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
             .background(Color("Background Light"))
             .previewInterfaceOrientation(.portrait)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

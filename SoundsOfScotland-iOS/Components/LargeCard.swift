@@ -46,10 +46,14 @@ struct LargeCard: View {
     }
 }
 
-/*
+
 struct LargeCard_Previews: PreviewProvider {
     static var previews: some View {
-        LargeCard(place: )
+        LargeCard(place: dummyPlace())
             .environmentObject(AppData())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-}*/
+}
+
+
+

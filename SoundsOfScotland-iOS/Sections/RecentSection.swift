@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct RecentSection: View {
-    var places: FetchedResults<Place>
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
+    
     var body: some View {
         VStack(spacing: 0) {
             // title
@@ -19,18 +23,19 @@ struct RecentSection: View {
             
             // vertical medium cards
             VStack(spacing: 20) {
-                MediumCard(soundscape: soundscapes[2], place: places[3])
-                MediumCard(soundscape: soundscapes[6], place: places[12])
-                MediumCard(soundscape: soundscapes[4], place: places[1])
+                MediumCard(place: places[0])
+                MediumCard(place: places[1])
+                MediumCard(place: places[2])
             }
             .padding(20)
         }
     }
 }
 
-/*
+
 struct RecentSection_Previews: PreviewProvider {
     static var previews: some View {
         RecentSection()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-}*/
+}

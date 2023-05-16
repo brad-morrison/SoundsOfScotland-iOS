@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct FeaturedSection: View {
-    var places: FetchedResults<Place>
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
     var body: some View {
         VStack(spacing: 0) {
             // title
@@ -31,9 +33,11 @@ struct FeaturedSection: View {
     }
 }
 
-/*
+
 struct FeaturedSection_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedSection()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-}*/
+}
+

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LargeWideCard: View {
     @State var comingSoon: Bool = false
-    var soundscape: Soundscape
+    //var soundscape: Soundscape
     @EnvironmentObject var data : AppData
     
     var place: Place
@@ -17,8 +17,8 @@ struct LargeWideCard: View {
     var body: some View {
         Button {
                 if (!comingSoon) {
-                    data.soundscape = soundscape // set current soundscape to this one
-                    data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                    //data.soundscape = soundscape // set current soundscape to this one
+                    //data.selectedTab = Tab.nowPlaying // switch view to SceneView
                 }
             } label: {
                 VStack(alignment: .leading, spacing: 8) {
@@ -49,10 +49,22 @@ struct LargeWideCard: View {
 }
 }
 
-/*
+
 struct LargeWideCard_Previews: PreviewProvider {
     static var previews: some View {
-        LargeWideCard(soundscape: soundscapes[0])
+        LargeWideCard(place: dummyPlace())
             .environmentObject(AppData())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        
     }
-}*/
+}
+
+func dummyPlace() -> Place {
+    let dummyPlace = Place(context: PersistenceController.preview.container.viewContext)
+    dummyPlace.id = UUID()
+    dummyPlace.title = "dummy place"
+    dummyPlace.image = "0"
+    dummyPlace.path = "a"
+    dummyPlace.starred = false
+    return dummyPlace
+}

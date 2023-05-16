@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct MediumCard: View {
-    var soundscape: Soundscape
     var place: Place
     @EnvironmentObject var data : AppData
     
     var body: some View {
             Button {
                 
-                data.soundscape = soundscape // set current soundscape to this one
-                data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                //data.soundscape = soundscape // set current soundscape to this one
+                //data.selectedTab = Tab.nowPlaying // switch view to SceneView
                 
             } label:  {
                 HStack(spacing: 20) {
@@ -39,9 +38,11 @@ struct MediumCard: View {
     }
 }
 
-/*
+
 struct MediumCard_Previews: PreviewProvider {
     static var previews: some View {
-        MediumCard(soundscape: soundscapes[0])
+        MediumCard(place: dummyPlace())
+            .environmentObject(AppData())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-}*/
+}
