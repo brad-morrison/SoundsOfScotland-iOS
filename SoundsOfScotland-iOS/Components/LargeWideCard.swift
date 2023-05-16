@@ -17,8 +17,8 @@ struct LargeWideCard: View {
     var body: some View {
         Button {
                 if (!comingSoon) {
-                    //data.soundscape = soundscape // set current soundscape to this one
-                    //data.selectedTab = Tab.nowPlaying // switch view to SceneView
+                    data.place = place // set current soundscape to this one
+                    data.selectedTab = Tab.nowPlaying // switch view to SceneView
                 }
             } label: {
                 VStack(alignment: .leading, spacing: 8) {

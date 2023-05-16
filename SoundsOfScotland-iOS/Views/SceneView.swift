@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 
 struct SceneView: View {
-    var soundscape: Soundscape
+    var place: Place
     var loadingNewScene = false
     @EnvironmentObject var data : AppData
     @EnvironmentObject var globalAudio : AudioManager
@@ -17,7 +17,7 @@ struct SceneView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text(data.soundscape.title)
+                Text(data.place.title ?? "error")
                     .foregroundColor(.white)
                     .customFont(.largeTitle)
                 
@@ -64,7 +64,7 @@ struct SceneView: View {
             .padding(.vertical, 100)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image(data.soundscape.image).resizable().scaledToFill())
+        .background(Image(data.place.image ?? "0").resizable().scaledToFill())
         .ignoresSafeArea()
         
 
@@ -74,8 +74,9 @@ struct SceneView: View {
 
 struct SceneView_Previews: PreviewProvider {
     static var previews: some View {
-        SceneView(soundscape: soundscapes[1])
+        SceneView(place: dummyPlace())
             .environmentObject(AppData())
             .environmentObject(AudioManager())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -16,14 +16,14 @@ struct NowPlayingBar: View {
                 Text("Now Playing")
                     .customFont(.footnote2)
                 Spacer()
-                Text(data.soundscape.title)
+                Text(data.place.title ?? "error")
             }
             .foregroundColor(.white)
             .frame(height: 300, alignment: .topLeading)
             .padding(.horizontal, 25)
             .padding(.vertical, 13)
             .background {
-                Image(data.soundscape.image)
+                Image(data.place.image ?? "0")
                     .resizable()
                     .scaledToFill()
                     .blur(radius: 3)

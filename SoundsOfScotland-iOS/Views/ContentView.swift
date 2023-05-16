@@ -11,6 +11,7 @@ import AVFoundation
 
 @MainActor class AppData : ObservableObject {
     @Published var soundscape = soundscapes[1]
+    @Published var place: Place = dummyPlace()
     @Published var tabOpen = true
     @Published var selectedTab: Tab = .home
     @Published var settingsButtonStatus = false
@@ -84,12 +85,7 @@ struct ContentView: View {
                         case .starred:
                             Text("Starred")
                         case .nowPlaying:
-                            //SceneView(soundscape: soundscapes[0], loadingNewScene: true)
-                            List {
-                                ForEach(places, id:\.self) { place in
-                                    Text("\(place.title ?? "Uknown")")
-                                }
-                            }
+                            SceneView(place: data.place, loadingNewScene: true)
                         }
                     }
                     
