@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Place" representedClassName="Place" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="image" optional="YES" attributeType="String"/>
-        <attribute name="path" optional="YES" attributeType="String"/>
-        <attribute name="starred" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
+    <entity name="Place" representedClassName=".Place" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" attributeType="String"/>
+        <attribute name="path" attributeType="String"/>
+        <attribute name="starred" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
     </entity>
 </model>

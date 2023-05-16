@@ -43,7 +43,7 @@ struct LargeWideCard: View {
                 )
                 .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 12)
-            .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
+                .shadow(color: .black.opacity(0.3), radius: 2, x: 0, y: 1)
         }
         
 }

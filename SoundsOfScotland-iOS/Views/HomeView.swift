@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
     @State var sceneIsOpen = false
     
-    @Environment(\.managedObjectContext) var managedObjectContext
+    //@Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     var body: some View {
@@ -18,12 +19,12 @@ struct HomeView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         
-                        NewSection()
-                        FeaturedSection()
-                        RecentSection()
-                        TrySection()
-                        ExploreSection()
-                        ComingSoonSection()
+                        //NewSection()
+                        //FeaturedSection()
+                        //RecentSection()
+                        //TrySection()
+                        //ExploreSection()
+                        //ComingSoonSection()
                         
                     }
                     .padding(.top, 130)

@@ -8,6 +8,7 @@
 import SwiftUI
 import RiveRuntime
 import AVFoundation
+import CoreData
 
 @MainActor class AppData : ObservableObject {
     @Published var soundscape = soundscapes[1]
@@ -54,11 +55,8 @@ struct ContentView: View {
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     // CoreData
-    @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(
-        entity: Place.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)])
-    var places: FetchedResults<Place>
+    //@Environment(\.managedObjectContext) var managedObjectContext
+    //@FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     var body: some View {
         
@@ -166,22 +164,18 @@ struct ContentView: View {
                 .background(Color("Background Light"))
                 .onAppear {
                     //if (isFirstLaunch) { populateDataOnFirstLaunch() }
-                    populateDataOnFirstLaunch()
-                    for soundscape in soundscapes {
+                    //populateDataOnFirstLaunch()
+                    /*for soundscape in soundscapes {
                         let place = Place(context: managedObjectContext)
                         place.id = soundscape.id
                         place.title = soundscape.title
                         place.image = soundscape.image
                         place.path = soundscape.path
                         place.starred = soundscape.fav
-                    }
+                    }*/
                 }
         }
         }
-        
-    func populateDataOnFirstLaunch() {
-        print("building data as it is first launch")
-    }
     
 }
 

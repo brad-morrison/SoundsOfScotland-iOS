@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct RecentSection: View {
-    @Environment(\.managedObjectContext) var managedObjectContext
+    //@Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
     
