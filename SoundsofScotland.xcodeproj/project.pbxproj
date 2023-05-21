@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4627C8F12A15517F00335E9D /* MediumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F02A15517F00335E9D /* MediumCard.swift */; };
+		4627C8F32A157F2B00335E9D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F22A157F2B00335E9D /* HomeView.swift */; };
+		4627C8F52A1580D900335E9D /* NewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F42A1580D900335E9D /* NewSection.swift */; };
+		4627C8F72A15838400335E9D /* LargeWideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F62A15838400335E9D /* LargeWideCard.swift */; };
+		4627C8F92A1584B400335E9D /* LargeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F82A1584B400335E9D /* LargeCard.swift */; };
+		4627C8FB2A1585AB00335E9D /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8FA2A1585AB00335E9D /* FeaturedSection.swift */; };
+		4627C8FD2A15863A00335E9D /* RecentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8FC2A15863A00335E9D /* RecentSection.swift */; };
+		4627C8FF2A1586CD00335E9D /* RoundCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8FE2A1586CD00335E9D /* RoundCard.swift */; };
+		4627C9012A15870C00335E9D /* SquareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C9002A15870C00335E9D /* SquareCard.swift */; };
+		4627C9032A15879300335E9D /* TrySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C9022A15879300335E9D /* TrySection.swift */; };
+		4627C9052A15883B00335E9D /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C9042A15883B00335E9D /* ExploreSection.swift */; };
+		4627C9072A1588AE00335E9D /* ComingSoonSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C9062A1588AE00335E9D /* ComingSoonSection.swift */; };
+		464F960F2A14CEFE00EA44D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464F960E2A14CEFE00EA44D8 /* Persistence.swift */; };
+		464F96162A15176B00EA44D8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464F96152A15176B00EA44D8 /* ViewModel.swift */; };
+		46584A892A15AB20004729CF /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 46584A882A15AB20004729CF /* RiveRuntime */; };
+		465A83042A1410AF0009DF51 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465A83002A1410AE0009DF51 /* Poppins-Bold.ttf */; };
+		465A83052A1410AF0009DF51 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465A83012A1410AF0009DF51 /* CustomFont.swift */; };
+		465A83062A1410AF0009DF51 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465A83022A1410AF0009DF51 /* Inter-Regular.ttf */; };
+		465A83072A1410AF0009DF51 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465A83032A1410AF0009DF51 /* Inter-SemiBold.ttf */; };
+		467A9EE02A16D73F00055307 /* NewModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EDE2A16D73F00055307 /* NewModel.xcdatamodeld */; };
+		467A9EE22A16D85900055307 /* StarredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EE12A16D85900055307 /* StarredButton.swift */; };
+		467A9EE42A16DD2700055307 /* StarredTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EE32A16DD2700055307 /* StarredTempView.swift */; };
+		467A9EE62A16E71500055307 /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EE52A16E71500055307 /* NowPlayingBar.swift */; };
+		467A9EEA2A16E91000055307 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EE92A16E91000055307 /* AudioManager.swift */; };
+		467A9EED2A16EA0600055307 /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */; };
+		467A9EEE2A16EA0600055307 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEC2A16EA0600055307 /* audioFile.wav */; };
+		46A828EA2A140C37004E08BC /* SoundsofScotlandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */; };
+		46A828EC2A140C37004E08BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828EB2A140C37004E08BC /* ContentView.swift */; };
+		46A828EE2A140C38004E08BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A828ED2A140C38004E08BC /* Assets.xcassets */; };
+		46A828F12A140C38004E08BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A828F02A140C38004E08BC /* Preview Assets.xcassets */; };
+		46B826E22A18407F0032D63E /* StarredButtonSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B826E12A18407F0032D63E /* StarredButtonSmall.swift */; };
+		46BCBBFB2A15ACAB00151EC6 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF32A15ACAB00151EC6 /* button.riv */; };
+		46BCBBFC2A15ACAB00151EC6 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF42A15ACAB00151EC6 /* confetti.riv */; };
+		46BCBBFD2A15ACAB00151EC6 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF52A15ACAB00151EC6 /* house.riv */; };
+		46BCBBFE2A15ACAB00151EC6 /* new_file.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF62A15ACAB00151EC6 /* new_file.riv */; };
+		46BCBBFF2A15ACAB00151EC6 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF72A15ACAB00151EC6 /* check.riv */; };
+		46BCBC002A15ACAB00151EC6 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF82A15ACAB00151EC6 /* icons.riv */; };
+		46BCBC012A15ACAB00151EC6 /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBF92A15ACAB00151EC6 /* menu_button.riv */; };
+		46BCBC022A15ACAB00151EC6 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 46BCBBFA2A15ACAB00151EC6 /* shapes.riv */; };
+		46BCBC042A15AD3900151EC6 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BCBC032A15AD3900151EC6 /* SideMenu.swift */; };
+		46BCBC062A15AF0300151EC6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BCBC052A15AF0300151EC6 /* TabBar.swift */; };
+		46D15DE72A15B4FE00F49CC0 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DE62A15B4FE00F49CC0 /* SceneView.swift */; };
+		46D15DEA2A15B58A00F49CC0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DE92A15B58A00F49CC0 /* RoundButton.swift */; };
+		46D15DEC2A15B5DE00F49CC0 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DEB2A15B5DE00F49CC0 /* PlayButton.swift */; };
+		46D15DEE2A15C0EE00F49CC0 /* TabBarOptimised.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DED2A15C0EE00F49CC0 /* TabBarOptimised.swift */; };
+		46F061FB2A14157F00AFEE1E /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F061FA2A14157F00AFEE1E /* AddPlaceView.swift */; };
+		46F061FD2A14183700AFEE1E /* CoreDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F061FC2A14183700AFEE1E /* CoreDataListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4627C8F02A15517F00335E9D /* MediumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumCard.swift; sourceTree = "<group>"; };
+		4627C8F22A157F2B00335E9D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4627C8F42A1580D900335E9D /* NewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSection.swift; sourceTree = "<group>"; };
+		4627C8F62A15838400335E9D /* LargeWideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWideCard.swift; sourceTree = "<group>"; };
+		4627C8F82A1584B400335E9D /* LargeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCard.swift; sourceTree = "<group>"; };
+		4627C8FA2A1585AB00335E9D /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
+		4627C8FC2A15863A00335E9D /* RecentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSection.swift; sourceTree = "<group>"; };
+		4627C8FE2A1586CD00335E9D /* RoundCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCard.swift; sourceTree = "<group>"; };
+		4627C9002A15870C00335E9D /* SquareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCard.swift; sourceTree = "<group>"; };
+		4627C9022A15879300335E9D /* TrySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrySection.swift; sourceTree = "<group>"; };
+		4627C9042A15883B00335E9D /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
+		4627C9062A1588AE00335E9D /* ComingSoonSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonSection.swift; sourceTree = "<group>"; };
+		464F960E2A14CEFE00EA44D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		464F96152A15176B00EA44D8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		465A83002A1410AE0009DF51 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		465A83012A1410AF0009DF51 /* CustomFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		465A83022A1410AF0009DF51 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		465A83032A1410AF0009DF51 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		465A83082A14126D0009DF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		467A9EDF2A16D73F00055307 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		467A9EE12A16D85900055307 /* StarredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredButton.swift; sourceTree = "<group>"; };
+		467A9EE32A16DD2700055307 /* StarredTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredTempView.swift; sourceTree = "<group>"; };
+		467A9EE52A16E71500055307 /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
+		467A9EE92A16E91000055307 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
+		467A9EEC2A16EA0600055307 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
+		46A828E62A140C37004E08BC /* SoundsofScotland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundsofScotland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsofScotlandApp.swift; sourceTree = "<group>"; };
+		46A828EB2A140C37004E08BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		46A828ED2A140C38004E08BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46A828F02A140C38004E08BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		46B826E12A18407F0032D63E /* StarredButtonSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredButtonSmall.swift; sourceTree = "<group>"; };
+		46BCBBF32A15ACAB00151EC6 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
+		46BCBBF42A15ACAB00151EC6 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
+		46BCBBF52A15ACAB00151EC6 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
+		46BCBBF62A15ACAB00151EC6 /* new_file.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_file.riv; sourceTree = "<group>"; };
+		46BCBBF72A15ACAB00151EC6 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
+		46BCBBF82A15ACAB00151EC6 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		46BCBBF92A15ACAB00151EC6 /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
+		46BCBBFA2A15ACAB00151EC6 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
+		46BCBC032A15AD3900151EC6 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		46BCBC052A15AF0300151EC6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		46D15DE62A15B4FE00F49CC0 /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		46D15DE92A15B58A00F49CC0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		46D15DEB2A15B5DE00F49CC0 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		46D15DED2A15C0EE00F49CC0 /* TabBarOptimised.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOptimised.swift; sourceTree = "<group>"; };
+		46F061FA2A14157F00AFEE1E /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
+		46F061FC2A14183700AFEE1E /* CoreDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46A828E32A140C37004E08BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46584A892A15AB20004729CF /* RiveRuntime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		465A82F12A140D790009DF51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46A828EB2A140C37004E08BC /* ContentView.swift */,
+				46F061FC2A14183700AFEE1E /* CoreDataListView.swift */,
+				46F061FA2A14157F00AFEE1E /* AddPlaceView.swift */,
+				4627C8F22A157F2B00335E9D /* HomeView.swift */,
+				46D15DE62A15B4FE00F49CC0 /* SceneView.swift */,
+				467A9EE32A16DD2700055307 /* StarredTempView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		465A82F22A140D800009DF51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				467A9EDE2A16D73F00055307 /* NewModel.xcdatamodeld */,
+				464F960E2A14CEFE00EA44D8 /* Persistence.swift */,
+				464F96152A15176B00EA44D8 /* ViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		465A82F32A140D8C0009DF51 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				46D15DE82A15B57300F49CC0 /* Buttons */,
+				465A82F42A140D9C0009DF51 /* Cards */,
+				46BCBC032A15AD3900151EC6 /* SideMenu.swift */,
+				46BCBC052A15AF0300151EC6 /* TabBar.swift */,
+				46D15DED2A15C0EE00F49CC0 /* TabBarOptimised.swift */,
+				467A9EE52A16E71500055307 /* NowPlayingBar.swift */,
+				467A9EE92A16E91000055307 /* AudioManager.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		465A82F42A140D9C0009DF51 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				4627C8F62A15838400335E9D /* LargeWideCard.swift */,
+				4627C8F82A1584B400335E9D /* LargeCard.swift */,
+				4627C8F02A15517F00335E9D /* MediumCard.swift */,
+				4627C9002A15870C00335E9D /* SquareCard.swift */,
+				4627C8FE2A1586CD00335E9D /* RoundCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		465A82FF2A1410A00009DF51 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				465A83012A1410AF0009DF51 /* CustomFont.swift */,
+				465A83022A1410AF0009DF51 /* Inter-Regular.ttf */,
+				465A83032A1410AF0009DF51 /* Inter-SemiBold.ttf */,
+				465A83002A1410AE0009DF51 /* Poppins-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		465A83092A1413870009DF51 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				4627C8F42A1580D900335E9D /* NewSection.swift */,
+				4627C8FA2A1585AB00335E9D /* FeaturedSection.swift */,
+				4627C8FC2A15863A00335E9D /* RecentSection.swift */,
+				4627C9022A15879300335E9D /* TrySection.swift */,
+				4627C9042A15883B00335E9D /* ExploreSection.swift */,
+				4627C9062A1588AE00335E9D /* ComingSoonSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		46A828DD2A140C37004E08BC = {
+			isa = PBXGroup;
+			children = (
+				46A828E82A140C37004E08BC /* SoundsofScotland */,
+				46A828E72A140C37004E08BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46A828E72A140C37004E08BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46A828E62A140C37004E08BC /* SoundsofScotland.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46A828E82A140C37004E08BC /* SoundsofScotland */ = {
+			isa = PBXGroup;
+			children = (
+				467A9EEC2A16EA0600055307 /* audioFile.wav */,
+				467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */,
+				465A83082A14126D0009DF51 /* Info.plist */,
+				46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */,
+				465A82F22A140D800009DF51 /* Model */,
+				465A82F12A140D790009DF51 /* Views */,
+				465A83092A1413870009DF51 /* Sections */,
+				465A82F32A140D8C0009DF51 /* Components */,
+				46A828ED2A140C38004E08BC /* Assets.xcassets */,
+				46BCBBF22A15AC8400151EC6 /* RiveAssets */,
+				465A82FF2A1410A00009DF51 /* Fonts */,
+				46A828EF2A140C38004E08BC /* Preview Content */,
+			);
+			path = SoundsofScotland;
+			sourceTree = "<group>";
+		};
+		46A828EF2A140C38004E08BC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				46A828F02A140C38004E08BC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		46BCBBF22A15AC8400151EC6 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				46BCBBF32A15ACAB00151EC6 /* button.riv */,
+				46BCBBF72A15ACAB00151EC6 /* check.riv */,
+				46BCBBF42A15ACAB00151EC6 /* confetti.riv */,
+				46BCBBF52A15ACAB00151EC6 /* house.riv */,
+				46BCBBF82A15ACAB00151EC6 /* icons.riv */,
+				46BCBBF92A15ACAB00151EC6 /* menu_button.riv */,
+				46BCBBF62A15ACAB00151EC6 /* new_file.riv */,
+				46BCBBFA2A15ACAB00151EC6 /* shapes.riv */,
+			);
+			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		46D15DE82A15B57300F49CC0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				46D15DE92A15B58A00F49CC0 /* RoundButton.swift */,
+				46D15DEB2A15B5DE00F49CC0 /* PlayButton.swift */,
+				467A9EE12A16D85900055307 /* StarredButton.swift */,
+				46B826E12A18407F0032D63E /* StarredButtonSmall.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46A828E52A140C37004E08BC /* SoundsofScotland */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46A828F42A140C38004E08BC /* Build configuration list for PBXNativeTarget "SoundsofScotland" */;
+			buildPhases = (
+				46A828E22A140C37004E08BC /* Sources */,
+				46A828E32A140C37004E08BC /* Frameworks */,
+				46A828E42A140C37004E08BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundsofScotland;
+			packageProductDependencies = (
+				46584A882A15AB20004729CF /* RiveRuntime */,
+			);
+			productName = SoundsofScotland;
+			productReference = 46A828E62A140C37004E08BC /* SoundsofScotland.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46A828DE2A140C37004E08BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					46A828E52A140C37004E08BC = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 46A828E12A140C37004E08BC /* Build configuration list for PBXProject "SoundsofScotland" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46A828DD2A140C37004E08BC;
+			packageReferences = (
+				46584A872A15AB20004729CF /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
+			productRefGroup = 46A828E72A140C37004E08BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46A828E52A140C37004E08BC /* SoundsofScotland */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46A828E42A140C37004E08BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46BCBBFF2A15ACAB00151EC6 /* check.riv in Resources */,
+				467A9EEE2A16EA0600055307 /* audioFile.wav in Resources */,
+				46BCBC022A15ACAB00151EC6 /* shapes.riv in Resources */,
+				46A828F12A140C38004E08BC /* Preview Assets.xcassets in Resources */,
+				46BCBC012A15ACAB00151EC6 /* menu_button.riv in Resources */,
+				465A83042A1410AF0009DF51 /* Poppins-Bold.ttf in Resources */,
+				465A83062A1410AF0009DF51 /* Inter-Regular.ttf in Resources */,
+				46BCBBFB2A15ACAB00151EC6 /* button.riv in Resources */,
+				46BCBBFD2A15ACAB00151EC6 /* house.riv in Resources */,
+				46BCBBFC2A15ACAB00151EC6 /* confetti.riv in Resources */,
+				465A83072A1410AF0009DF51 /* Inter-SemiBold.ttf in Resources */,
+				46BCBBFE2A15ACAB00151EC6 /* new_file.riv in Resources */,
+				46A828EE2A140C38004E08BC /* Assets.xcassets in Resources */,
+				46BCBC002A15ACAB00151EC6 /* icons.riv in Resources */,
+				467A9EED2A16EA0600055307 /* tentsmuir_forest.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46A828E22A140C37004E08BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46D15DEA2A15B58A00F49CC0 /* RoundButton.swift in Sources */,
+				4627C9012A15870C00335E9D /* SquareCard.swift in Sources */,
+				465A83052A1410AF0009DF51 /* CustomFont.swift in Sources */,
+				46BCBC042A15AD3900151EC6 /* SideMenu.swift in Sources */,
+				4627C9052A15883B00335E9D /* ExploreSection.swift in Sources */,
+				46A828EC2A140C37004E08BC /* ContentView.swift in Sources */,
+				4627C8F32A157F2B00335E9D /* HomeView.swift in Sources */,
+				4627C9032A15879300335E9D /* TrySection.swift in Sources */,
+				4627C8FD2A15863A00335E9D /* RecentSection.swift in Sources */,
+				4627C8F12A15517F00335E9D /* MediumCard.swift in Sources */,
+				46D15DEC2A15B5DE00F49CC0 /* PlayButton.swift in Sources */,
+				467A9EE02A16D73F00055307 /* NewModel.xcdatamodeld in Sources */,
+				467A9EE62A16E71500055307 /* NowPlayingBar.swift in Sources */,
+				4627C8FB2A1585AB00335E9D /* FeaturedSection.swift in Sources */,
+				46F061FD2A14183700AFEE1E /* CoreDataListView.swift in Sources */,
+				46D15DEE2A15C0EE00F49CC0 /* TabBarOptimised.swift in Sources */,
+				4627C9072A1588AE00335E9D /* ComingSoonSection.swift in Sources */,
+				4627C8F92A1584B400335E9D /* LargeCard.swift in Sources */,
+				467A9EEA2A16E91000055307 /* AudioManager.swift in Sources */,
+				464F960F2A14CEFE00EA44D8 /* Persistence.swift in Sources */,
+				46F061FB2A14157F00AFEE1E /* AddPlaceView.swift in Sources */,
+				46D15DE72A15B4FE00F49CC0 /* SceneView.swift in Sources */,
+				4627C8F72A15838400335E9D /* LargeWideCard.swift in Sources */,
+				4627C8FF2A1586CD00335E9D /* RoundCard.swift in Sources */,
+				4627C8F52A1580D900335E9D /* NewSection.swift in Sources */,
+				46B826E22A18407F0032D63E /* StarredButtonSmall.swift in Sources */,
+				46BCBC062A15AF0300151EC6 /* TabBar.swift in Sources */,
+				464F96162A15176B00EA44D8 /* ViewModel.swift in Sources */,
+				46A828EA2A140C37004E08BC /* SoundsofScotlandApp.swift in Sources */,
+				467A9EE42A16DD2700055307 /* StarredTempView.swift in Sources */,
+				467A9EE22A16D85900055307 /* StarredButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		46A828F22A140C38004E08BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46A828F32A140C38004E08BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46A828F52A140C38004E08BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundsofScotland/Preview Content\"";
+				DEVELOPMENT_TEAM = 49GQP3E9CJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundsofScotland/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sounds of Scotland";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tigermoon.sos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46A828F62A140C38004E08BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoundsofScotland/Preview Content\"";
+				DEVELOPMENT_TEAM = 49GQP3E9CJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SoundsofScotland/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sounds of Scotland";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tigermoon.sos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46A828E12A140C37004E08BC /* Build configuration list for PBXProject "SoundsofScotland" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A828F22A140C38004E08BC /* Debug */,
+				46A828F32A140C38004E08BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46A828F42A140C38004E08BC /* Build configuration list for PBXNativeTarget "SoundsofScotland" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A828F52A140C38004E08BC /* Debug */,
+				46A828F62A140C38004E08BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46584A872A15AB20004729CF /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46584A882A15AB20004729CF /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46584A872A15AB20004729CF /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		467A9EDE2A16D73F00055307 /* NewModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				467A9EDF2A16D73F00055307 /* Model.xcdatamodel */,
+			);
+			currentVersion = 467A9EDF2A16D73F00055307 /* Model.xcdatamodel */;
+			path = NewModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 46A828DE2A140C37004E08BC /* Project object */;
+}
