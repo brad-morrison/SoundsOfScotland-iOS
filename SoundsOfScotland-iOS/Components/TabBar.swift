@@ -2,16 +2,15 @@
 //  TabBar.swift
 //  SoundsofScotland
 //
-//  Created by Brad on 07/09/2022.
+//  Created by Bradley Morrison on 18/05/2023.
 //
-
 import SwiftUI
 import RiveRuntime
 
+// to do for tomorrow - remove Rive icons and replace with normal ones for performance.
+
 struct TabBar: View {
-    //@AppStorage("selectedTab") var selectedTab: Tab = .home
     @EnvironmentObject var data : AppData
-    let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
         VStack {
@@ -31,13 +30,13 @@ struct TabBar: View {
     var content: some View {
          ForEach(tabItems) { item in
             Button {
-                item.icon.setInput("active", value: true)
+                /*item.icon.setInput("active", value: true)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     item.icon.setInput("active", value: false)
-                }
-                withAnimation(.spring(response: 0.22, dampingFraction: 0.4)) {
+                }*/
+                //withAnimation(.spring(response: 0.22, dampingFraction: 0.4)) {
                     data.selectedTab = item.tab
-                }
+                //}
             } label: {
                 item.icon.view()
                     .frame(height: 36)
@@ -83,4 +82,3 @@ enum Tab: String {
     case starred
     case nowPlaying
 }
-

@@ -1,14 +1,14 @@
 //
 //  SideMenu.swift
-//  Animated
+//  SoundsofScotland
 //
-//  Created by Brad on 05/09/2022.
+//  Created by Bradley Morrison on 18/05/2023.
 //
+
 import SwiftUI
-import RiveRuntime
 
 struct SideMenu: View {
-    @State private var showingSheet = false
+    //@EnvironmentObject var data : AppData
     
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct SideMenu: View {
             }
             .padding()
             
-            //Text("BROWSE")
+            Text("BROWSE")
                 .customFont(.subheadline2)
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,27 +36,13 @@ struct SideMenu: View {
             
             
             
-            //Text("HISTORY")
+            Text("HISTORY")
                 .customFont(.subheadline2)
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 24)
                 .padding(.top, 40)
                 .opacity(0.7)
-            
-            Text("CoreData")
-                    .customFont(.subheadline2)
-                    .foregroundColor(.black)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 24)
-                    .padding(.top, 40)
-                    .opacity(0.7)
-                    .onTapGesture {
-                    showingSheet.toggle()
-                }
-            
-            
-             
             
             
             Spacer()
@@ -65,19 +51,15 @@ struct SideMenu: View {
         }
         .foregroundColor(.black)
         .frame(maxWidth: 288, maxHeight: .infinity)
-        .background(Color("Background Light"))
+        //.background(Color("Background Light"))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .frame(maxWidth: .infinity, alignment: .leading)
-        .sheet(isPresented: $showingSheet) {
-                    CoreDataDisplayView()
-                }
     }
 }
+
 
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
         SideMenu()
-            .previewDevice("iPhone 13 Pro Max")
     }
 }
-

@@ -1,16 +1,15 @@
 //
 //  ComingSoonSection.swift
-//  SoundsOfScotland-iOS
+//  SoundsofScotland
 //
-//  Created by Bradley Morrison on 14/05/2023.
+//  Created by Bradley Morrison on 17/05/2023.
 //
 
 import SwiftUI
-import CoreData
 
 struct ComingSoonSection: View {
-    //@Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
+    @StateObject private var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
     
     var body: some View {
         VStack(spacing: 0) {
@@ -22,7 +21,7 @@ struct ComingSoonSection: View {
                 .padding(.horizontal, 20)
             
             // large featured cards
-            LargeWideCard(comingSoon: true, place: places[0])
+            LargeWideCard(comingSoon: true, place: viewModel.places[0])
                 .padding(20)
         }
         .padding(.bottom, 110)
@@ -32,6 +31,5 @@ struct ComingSoonSection: View {
 struct ComingSoonSection_Previews: PreviewProvider {
     static var previews: some View {
         ComingSoonSection()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

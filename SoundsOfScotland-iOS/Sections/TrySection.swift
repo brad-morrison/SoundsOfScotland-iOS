@@ -1,16 +1,15 @@
 //
 //  TrySection.swift
-//  SoundsOfScotland-iOS
+//  SoundsofScotland
 //
-//  Created by Bradley Morrison on 14/05/2023.
+//  Created by Bradley Morrison on 17/05/2023.
 //
 
 import SwiftUI
-import CoreData
 
 struct TrySection: View {
-    //@Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
+    
+    @StateObject private var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
     
     var body: some View {
         VStack(spacing: 0) {
@@ -23,7 +22,7 @@ struct TrySection: View {
             // round cards
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(places) { place in
+                    ForEach(viewModel.places) { place in
                         RoundCard(place: place)
                     }
                 }
@@ -37,6 +36,5 @@ struct TrySection: View {
 struct TrySection_Previews: PreviewProvider {
     static var previews: some View {
         TrySection()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

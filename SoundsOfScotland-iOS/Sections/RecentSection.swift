@@ -1,17 +1,15 @@
 //
 //  RecentSection.swift
-//  SoundsOfScotland-iOS
+//  SoundsofScotland
 //
-//  Created by Bradley Morrison on 14/05/2023.
+//  Created by Bradley Morrison on 17/05/2023.
 //
 
 import SwiftUI
-import CoreData
 
 struct RecentSection: View {
-    //@Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: Place.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Place.title, ascending: true)]) var places: FetchedResults<Place>
     
+    @StateObject private var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
     
     var body: some View {
         VStack(spacing: 0) {
@@ -19,23 +17,24 @@ struct RecentSection: View {
             Text("Recent")
                 .customFont(.title3)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
+                .padding(.horizontal, 20)
             
             // vertical medium cards
+            
             VStack(spacing: 20) {
-                MediumCard(place: places[0])
-                MediumCard(place: places[1])
-                MediumCard(place: places[2])
+                ForEach(0..<3) { index in
+                    if index < viewModel.places.count {
+                        MediumCard(place: viewModel.places[index])
+                    }
+                }
             }
             .padding(20)
         }
     }
 }
 
-
 struct RecentSection_Previews: PreviewProvider {
     static var previews: some View {
         RecentSection()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

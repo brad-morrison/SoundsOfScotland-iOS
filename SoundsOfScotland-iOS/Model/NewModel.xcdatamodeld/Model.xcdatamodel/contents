@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PlaceEntity" representedClassName="PlaceEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="image" attributeType="String" defaultValueString="0"/>
+        <attribute name="name" attributeType="String" defaultValueString="place_name"/>
+        <attribute name="path" optional="YES" attributeType="String" defaultValueString="path"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+</model>

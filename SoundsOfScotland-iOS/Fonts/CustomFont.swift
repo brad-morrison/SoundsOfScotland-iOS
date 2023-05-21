@@ -1,8 +1,8 @@
 //
 //  CustomFont.swift
-//  Animated
+//  A collection of custom font parameters for quick and adaptable edits
 //
-//  Created by Brad on 03/09/2022.
+//  Created by Bradley Morrison on 03/09/2022.
 //
 
 import SwiftUI
@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomFont: ViewModifier {
     var textStyle: TextStyle
     
+    // font type
     var name: String {
         switch textStyle {
         case .largeTitle, .title, .title2, .title3:
@@ -21,6 +22,7 @@ struct CustomFont: ViewModifier {
         }
     }
     
+    // font size
     var size: CGFloat {
         switch textStyle {
         case .largeTitle:
@@ -50,6 +52,7 @@ struct CustomFont: ViewModifier {
         }
     }
     
+    // corresponding enum
     var relative: Font.TextStyle {
         switch textStyle {
         case .largeTitle:

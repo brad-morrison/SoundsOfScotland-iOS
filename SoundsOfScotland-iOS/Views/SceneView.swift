@@ -2,14 +2,14 @@
 //  SceneView.swift
 //  SoundsofScotland
 //
-//  Created by Brad on 06/09/2022.
+//  Created by Bradley Morrison on 18/05/2023.
 //
 
 import SwiftUI
-import AVFoundation
 
 struct SceneView: View {
-    var place: Place
+    
+    var place: PlaceEntity
     var loadingNewScene = false
     @EnvironmentObject var data : AppData
     @EnvironmentObject var globalAudio : AudioManager
@@ -17,7 +17,7 @@ struct SceneView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text(data.place.title ?? "error")
+                Text(data.place.name ?? "")
                     .foregroundColor(.white)
                     .customFont(.largeTitle)
                 
@@ -28,7 +28,7 @@ struct SceneView: View {
                         .onTapGesture {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                 data.tabOpen.toggle()
-                                data.nowPlayingOpen.toggle()
+                                data.nowPlayingBarOpen.toggle()
                                 data.selectedTab = .home
                             }
                         }
@@ -36,19 +36,33 @@ struct SceneView: View {
                         .onAppear {
                             
                             // load in new data if new scene
-                            if (data.soundscape.path != globalAudio.audioPlayer?.url?.deletingPathExtension().lastPathComponent)
+                            
+                        
+                            if (data.place.path != globalAudio.audioPlayer?.url?.deletingPathExtension().lastPathComponent)
                             {
                                 print("new sound loaded")
-                                let fileName = data.soundscape.path
-                                globalAudio.loadAudio(filename: fileName)
-                                globalAudio.playAudio()
-                                data.isPlaying = true
+                                let fileName = data.place.path
+                                print("LOADED \(data.place.path) into fileName")
+                                globalAudio.loadAudio(filename: fileName!)
                             }
                             else
                             {
                                 print("same sound detected - not creating new sound")
                             }
-                    
+                             
+                             
+                            
+                            //
+                            
+                             if (data.isPlaying == false)
+                             {
+                             let fileName = data.place.path
+                             globalAudio.loadAudio(filename: fileName!)
+                             globalAudio.playAudio()
+                             //
+                             data.isPlaying = true
+                             }
+                             
                         }
                         .onTapGesture {
                             data.isPlaying.toggle()
@@ -57,18 +71,15 @@ struct SceneView: View {
                         .onDisappear {
                             //globalAudio.stopAudio()
                         }
-                    FavButton(size: 30, iconSize: 32)
+                    StarredButton(size: 30, iconSize: 32, place: data.place)
                 }
-                    
+                
             }
             .padding(.vertical, 100)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image(data.place.image ?? "0").resizable().scaledToFill())
+        .background(Image(data.place.image ?? "").resizable().scaledToFill())
         .ignoresSafeArea()
-        
-
-        
     }
 }
 
@@ -77,6 +88,5 @@ struct SceneView_Previews: PreviewProvider {
         SceneView(place: dummyPlace())
             .environmentObject(AppData())
             .environmentObject(AudioManager())
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
