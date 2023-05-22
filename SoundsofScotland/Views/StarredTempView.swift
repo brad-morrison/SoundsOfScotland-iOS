@@ -10,12 +10,10 @@ import SwiftUI
 struct StarredTempView: View {
     
     @StateObject var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
-    @State var updater: Bool = false
     @State private var buttonState = true
     
     var body: some View {
         VStack(spacing: 0) {
-            updater ? Text("on") : Text("off")
             // title
             Text("Starred")
                 .customFont(.title3)
