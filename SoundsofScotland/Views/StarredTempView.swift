@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StarredTempView: View {
     
+    @EnvironmentObject var data : AppData
     @StateObject var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var buttonState = true
     
@@ -56,6 +57,9 @@ struct StarredTempView: View {
             Spacer()
         }
         .padding(.top, 80)
+        .onAppear {
+            data.mostRecentTab = .starred
+        }
     }
     
     let columns = [

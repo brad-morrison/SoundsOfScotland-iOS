@@ -18,6 +18,7 @@ class AppData : ObservableObject {
     @Published var nowPlayingBarOpen = false
     @Published var isPlaying = false
     @Published var shadows = true // controls all card shadows
+    @Published var mostRecentTab: Tab = .home
 }
 
 struct ContentView: View {
@@ -45,10 +46,13 @@ struct ContentView: View {
                             .offset(x: data.settingsButtonStatus ? 265 : 0)
                             .scaleEffect(data.settingsButtonStatus ? 0.9 : 1)
                             .ignoresSafeArea()
+                        
                     case .categories:
                         CoreDataListView()
+                        
                     case .starred:
                         StarredTempView()
+                        
                         
                     case .nowPlaying:
                         //SceneView(tabOpen: $tabOpen, selectedTab: $selectedTab, nowPlayingOpen: $nowPlayingOpen)

@@ -33,6 +33,7 @@
 		467A9EEA2A16E91000055307 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467A9EE92A16E91000055307 /* AudioManager.swift */; };
 		467A9EED2A16EA0600055307 /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */; };
 		467A9EEE2A16EA0600055307 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEC2A16EA0600055307 /* audioFile.wav */; };
+		4699BB392A1D6F130085ABB1 /* SceneViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */; };
 		46A828EA2A140C37004E08BC /* SoundsofScotlandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */; };
 		46A828EC2A140C37004E08BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828EB2A140C37004E08BC /* ContentView.swift */; };
 		46A828EE2A140C38004E08BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A828ED2A140C38004E08BC /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		467A9EE92A16E91000055307 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
 		467A9EEC2A16EA0600055307 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
+		4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewCircle.swift; sourceTree = "<group>"; };
 		46A828E62A140C37004E08BC /* SoundsofScotland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundsofScotland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsofScotlandApp.swift; sourceTree = "<group>"; };
 		46A828EB2A140C37004E08BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4627C8F22A157F2B00335E9D /* HomeView.swift */,
 				46D15DE62A15B4FE00F49CC0 /* SceneView.swift */,
 				467A9EE32A16DD2700055307 /* StarredTempView.swift */,
+				4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				4627C8FD2A15863A00335E9D /* RecentSection.swift in Sources */,
 				4627C8F12A15517F00335E9D /* MediumCard.swift in Sources */,
 				46D15DEC2A15B5DE00F49CC0 /* PlayButton.swift in Sources */,
+				4699BB392A1D6F130085ABB1 /* SceneViewCircle.swift in Sources */,
 				467A9EE02A16D73F00055307 /* NewModel.xcdatamodeld in Sources */,
 				467A9EE62A16E71500055307 /* NowPlayingBar.swift in Sources */,
 				4627C8FB2A1585AB00335E9D /* FeaturedSection.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct CoreDataListView: View {
+    @EnvironmentObject var data : AppData
     @State private var showingAddScreen = false
     @StateObject private var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
     
@@ -51,6 +52,7 @@ struct CoreDataListView: View {
         .onAppear(perform: {
             print("LOADED")
             viewModel.fetchPlaces()
+            data.mostRecentTab = .categories
         })
     }
 }
@@ -58,5 +60,6 @@ struct CoreDataListView: View {
 struct CoreDataListView_Previews: PreviewProvider {
     static var previews: some View {
         CoreDataListView()
+            .environmentObject(AppData())
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SceneView: View {
+struct SceneViewCircle: View {
     
     var place: PlaceEntity
     var loadingNewScene = false
@@ -18,8 +18,26 @@ struct SceneView: View {
         ZStack {
             VStack {
                 Text(data.place.name ?? "")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .customFont(.largeTitle)
+                
+                Spacer()
+                
+                ZStack {
+                    Image(place.image ?? "0")
+                        .resizable()
+                        .frame(width: 378, height: 378)
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .blur(radius: 40)
+                    
+                    Image(place.image ?? "0")
+                        .resizable()
+                        .frame(width: 378, height: 378)
+                        .scaledToFill()
+                        .clipShape(Circle())
+                    
+                }
                 
                 Spacer()
                 
@@ -29,18 +47,15 @@ struct SceneView: View {
                             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                                 data.tabOpen.toggle()
                                 data.nowPlayingBarOpen.toggle()
-                                
+                                data.selectedTab = .home
                             }
-                            
-                            data.selectedTab = data.mostRecentTab
-                            
                         }
                     PlayButton(size: 60, iconSize: 50)
                         .onAppear {
                             
                             // load in new data if new scene
                             
-                        
+                            
                             if (data.place.path != globalAudio.audioPlayer?.url?.deletingPathExtension().lastPathComponent)
                             {
                                 print("new sound loaded")
@@ -52,20 +67,20 @@ struct SceneView: View {
                             {
                                 print("same sound detected - not creating new sound")
                             }
-                             
-                             
+                            
+                            
                             
                             //
                             
-                             if (data.isPlaying == false)
-                             {
-                             let fileName = data.place.path
-                             globalAudio.loadAudio(filename: fileName!)
-                             globalAudio.playAudio()
-                             //
-                             data.isPlaying = true
-                             }
-                             
+                            if (data.isPlaying == false)
+                            {
+                                let fileName = data.place.path
+                                globalAudio.loadAudio(filename: fileName!)
+                                globalAudio.playAudio()
+                                //
+                                data.isPlaying = true
+                            }
+                            
                         }
                         .onTapGesture {
                             data.isPlaying.toggle()
@@ -80,15 +95,15 @@ struct SceneView: View {
             }
             .padding(.vertical, 100)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image(data.place.image ?? "").resizable().scaledToFill())
         .ignoresSafeArea()
     }
 }
 
-struct SceneView_Previews: PreviewProvider {
+
+
+struct SceneViewCircle_Previews: PreviewProvider {
     static var previews: some View {
-        SceneView(place: dummyPlace())
+        SceneViewCircle(place: dummyPlace())
             .environmentObject(AppData())
             .environmentObject(AudioManager())
     }

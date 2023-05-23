@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var data : AppData
     var body: some View {
         ZStack {
             ScrollView {
@@ -24,6 +25,9 @@ struct HomeView: View {
         }
         .ignoresSafeArea()
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .onAppear{
+            data.mostRecentTab = .home
+        }
     }
 }
 
