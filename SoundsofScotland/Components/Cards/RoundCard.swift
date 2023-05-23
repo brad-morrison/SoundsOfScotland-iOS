@@ -33,11 +33,13 @@ struct RoundCard: View {
                                .fixedSize(horizontal: false, vertical: true)
                        }
                }
+                .buttonStyle(PlainButtonStyle()) // Apply plain button style
     }
 }
 
 struct RoundCard_Previews: PreviewProvider {
     static var previews: some View {
         RoundCard(place: dummyPlace())
+            .environmentObject(AppData())
     }
 }
