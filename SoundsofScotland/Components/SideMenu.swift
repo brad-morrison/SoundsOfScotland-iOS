@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SideMenu: View {
     //@EnvironmentObject var data : AppData
+    @State private var isShowingOnboarding = false
     
     var body: some View {
         VStack {
@@ -44,16 +45,30 @@ struct SideMenu: View {
                 .padding(.top, 40)
                 .opacity(0.7)
             
+            Button {
+                isShowingOnboarding.toggle()
+            } label: {
+                Text("login")
+                    .customFont(.headline)
+            }
+            .padding()
+            .padding(.horizontal, 100)
+            .background(Color(.lightGray))
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .padding(.top, 80)
             
             Spacer()
             
-            Spacer()
+            
         }
         .foregroundColor(.black)
         .frame(maxWidth: 288, maxHeight: .infinity)
         //.background(Color("Background Light"))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .frame(maxWidth: .infinity, alignment: .leading)
+        .sheet(isPresented: $isShowingOnboarding) {
+            OnBoardingView()
+        }
     }
 }
 

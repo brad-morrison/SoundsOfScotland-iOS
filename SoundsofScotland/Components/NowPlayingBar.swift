@@ -28,6 +28,7 @@ struct NowPlayingBar: View {
             Spacer()
             Text(data.place.name ?? "")
         }
+        
         .foregroundColor(.white)
         .frame(height: 300, alignment: .topLeading)
         .padding(.horizontal, 25)
@@ -38,26 +39,39 @@ struct NowPlayingBar: View {
                 .scaledToFill()
                 .blur(radius: 3)
         }
+        
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .offset(y: offset.height)
         .onTapGesture {
             data.selectedTab = .nowPlaying
         }
+        
         .gesture(
-                DragGesture()
-                    .updating($dragState) { value, state, _ in
-                        state = .dragging(translation: value.translation)
-                    }
-                    .onEnded { value in
-                        if value.translation.height > 0 {
-                            // User dragged down
-                            // Do something here, like updating a state variable or performing an action
-                            withAnimation {
-                                                print("Dragging down!")
-                                                data.nowPlayingBarOpen = false
-                                            }
+            DragGesture()
+                .updating($dragState) { value, state, _ in
+                    state = .dragging(translation: value.translation)
+                    //
+                    offset.height = value.translation.height
+                }
+                .onEnded { value in
+                    if value.translation.height > 0 {
+                        // User dragged down
+                        withAnimation {
+                            print("Dragging down!")
+                            data.nowPlayingBarOpen = false
+                        }
+                    } else {
+                        if value.translation.height < 0 {
+                            // User dragged up
+                            withAnimation(.spring()) {
+                                print("Dragging up!")
+                                //data.nowPlayingBarOpen = false
+                                offset = .zero
+                            }
                         }
                     }
-            )
+                }
+        )
         
     }
 }

@@ -34,6 +34,11 @@
 		467A9EED2A16EA0600055307 /* tentsmuir_forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */; };
 		467A9EEE2A16EA0600055307 /* audioFile.wav in Resources */ = {isa = PBXBuildFile; fileRef = 467A9EEC2A16EA0600055307 /* audioFile.wav */; };
 		4699BB392A1D6F130085ABB1 /* SceneViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */; };
+		469F0E0E2A1E0B3C00B01F29 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 469F0E0D2A1E0B3C00B01F29 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		469F0E102A1E0B3C00B01F29 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 469F0E0F2A1E0B3C00B01F29 /* FirebaseFirestore */; };
+		469F0E122A1E0B4A00B01F29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 469F0E112A1E0B4A00B01F29 /* GoogleService-Info.plist */; };
+		469F0E142A1E0BD000B01F29 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F0E132A1E0BD000B01F29 /* OnBoardingView.swift */; };
+		469F0E172A1E0FB700B01F29 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 469F0E162A1E0FB700B01F29 /* FirebaseAuth */; };
 		46A828EA2A140C37004E08BC /* SoundsofScotlandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */; };
 		46A828EC2A140C37004E08BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A828EB2A140C37004E08BC /* ContentView.swift */; };
 		46A828EE2A140C38004E08BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A828ED2A140C38004E08BC /* Assets.xcassets */; };
@@ -53,6 +58,7 @@
 		46D15DEA2A15B58A00F49CC0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DE92A15B58A00F49CC0 /* RoundButton.swift */; };
 		46D15DEC2A15B5DE00F49CC0 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DEB2A15B5DE00F49CC0 /* PlayButton.swift */; };
 		46D15DEE2A15C0EE00F49CC0 /* TabBarOptimised.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D15DED2A15C0EE00F49CC0 /* TabBarOptimised.swift */; };
+		46D1FBE02A24089E0032BCF2 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1FBDF2A24089E0032BCF2 /* AuthViewModel.swift */; };
 		46F061FB2A14157F00AFEE1E /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F061FA2A14157F00AFEE1E /* AddPlaceView.swift */; };
 		46F061FD2A14183700AFEE1E /* CoreDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F061FC2A14183700AFEE1E /* CoreDataListView.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +83,7 @@
 		465A83022A1410AF0009DF51 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		465A83032A1410AF0009DF51 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		465A83082A14126D0009DF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4672BA202A1E40FA00C41706 /* SoundsofScotland.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundsofScotland.entitlements; sourceTree = "<group>"; };
 		467A9EDF2A16D73F00055307 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		467A9EE12A16D85900055307 /* StarredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredButton.swift; sourceTree = "<group>"; };
 		467A9EE32A16DD2700055307 /* StarredTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredTempView.swift; sourceTree = "<group>"; };
@@ -85,6 +92,8 @@
 		467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tentsmuir_forest.wav; sourceTree = "<group>"; };
 		467A9EEC2A16EA0600055307 /* audioFile.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audioFile.wav; sourceTree = "<group>"; };
 		4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewCircle.swift; sourceTree = "<group>"; };
+		469F0E112A1E0B4A00B01F29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		469F0E132A1E0BD000B01F29 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		46A828E62A140C37004E08BC /* SoundsofScotland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundsofScotland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsofScotlandApp.swift; sourceTree = "<group>"; };
 		46A828EB2A140C37004E08BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +114,7 @@
 		46D15DE92A15B58A00F49CC0 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		46D15DEB2A15B5DE00F49CC0 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		46D15DED2A15C0EE00F49CC0 /* TabBarOptimised.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOptimised.swift; sourceTree = "<group>"; };
+		46D1FBDF2A24089E0032BCF2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		46F061FA2A14157F00AFEE1E /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
 		46F061FC2A14183700AFEE1E /* CoreDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +125,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46584A892A15AB20004729CF /* RiveRuntime in Frameworks */,
+				469F0E0E2A1E0B3C00B01F29 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				469F0E102A1E0B3C00B01F29 /* FirebaseFirestore in Frameworks */,
+				469F0E172A1E0FB700B01F29 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +144,7 @@
 				46D15DE62A15B4FE00F49CC0 /* SceneView.swift */,
 				467A9EE32A16DD2700055307 /* StarredTempView.swift */,
 				4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */,
+				469F0E132A1E0BD000B01F29 /* OnBoardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +155,7 @@
 				467A9EDE2A16D73F00055307 /* NewModel.xcdatamodeld */,
 				464F960E2A14CEFE00EA44D8 /* Persistence.swift */,
 				464F96152A15176B00EA44D8 /* ViewModel.swift */,
+				46D1FBDF2A24089E0032BCF2 /* AuthViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,9 +229,11 @@
 		46A828E82A140C37004E08BC /* SoundsofScotland */ = {
 			isa = PBXGroup;
 			children = (
+				4672BA202A1E40FA00C41706 /* SoundsofScotland.entitlements */,
 				467A9EEC2A16EA0600055307 /* audioFile.wav */,
 				467A9EEB2A16EA0600055307 /* tentsmuir_forest.wav */,
 				465A83082A14126D0009DF51 /* Info.plist */,
+				469F0E112A1E0B4A00B01F29 /* GoogleService-Info.plist */,
 				46A828E92A140C37004E08BC /* SoundsofScotlandApp.swift */,
 				465A82F22A140D800009DF51 /* Model */,
 				465A82F12A140D790009DF51 /* Views */,
@@ -282,6 +299,9 @@
 			name = SoundsofScotland;
 			packageProductDependencies = (
 				46584A882A15AB20004729CF /* RiveRuntime */,
+				469F0E0D2A1E0B3C00B01F29 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				469F0E0F2A1E0B3C00B01F29 /* FirebaseFirestore */,
+				469F0E162A1E0FB700B01F29 /* FirebaseAuth */,
 			);
 			productName = SoundsofScotland;
 			productReference = 46A828E62A140C37004E08BC /* SoundsofScotland.app */;
@@ -313,6 +333,7 @@
 			mainGroup = 46A828DD2A140C37004E08BC;
 			packageReferences = (
 				46584A872A15AB20004729CF /* XCRemoteSwiftPackageReference "rive-ios" */,
+				469F0E0C2A1E0B3C00B01F29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 46A828E72A140C37004E08BC /* Products */;
 			projectDirPath = "";
@@ -337,6 +358,7 @@
 				465A83062A1410AF0009DF51 /* Inter-Regular.ttf in Resources */,
 				46BCBBFB2A15ACAB00151EC6 /* button.riv in Resources */,
 				46BCBBFD2A15ACAB00151EC6 /* house.riv in Resources */,
+				469F0E122A1E0B4A00B01F29 /* GoogleService-Info.plist in Resources */,
 				46BCBBFC2A15ACAB00151EC6 /* confetti.riv in Resources */,
 				465A83072A1410AF0009DF51 /* Inter-SemiBold.ttf in Resources */,
 				46BCBBFE2A15ACAB00151EC6 /* new_file.riv in Resources */,
@@ -363,6 +385,7 @@
 				4627C9032A15879300335E9D /* TrySection.swift in Sources */,
 				4627C8FD2A15863A00335E9D /* RecentSection.swift in Sources */,
 				4627C8F12A15517F00335E9D /* MediumCard.swift in Sources */,
+				46D1FBE02A24089E0032BCF2 /* AuthViewModel.swift in Sources */,
 				46D15DEC2A15B5DE00F49CC0 /* PlayButton.swift in Sources */,
 				4699BB392A1D6F130085ABB1 /* SceneViewCircle.swift in Sources */,
 				467A9EE02A16D73F00055307 /* NewModel.xcdatamodeld in Sources */,
@@ -380,6 +403,7 @@
 				4627C8FF2A1586CD00335E9D /* RoundCard.swift in Sources */,
 				4627C8F52A1580D900335E9D /* NewSection.swift in Sources */,
 				46B826E22A18407F0032D63E /* StarredButtonSmall.swift in Sources */,
+				469F0E142A1E0BD000B01F29 /* OnBoardingView.swift in Sources */,
 				46BCBC062A15AF0300151EC6 /* TabBar.swift in Sources */,
 				464F96162A15176B00EA44D8 /* ViewModel.swift in Sources */,
 				46A828EA2A140C37004E08BC /* SoundsofScotlandApp.swift in Sources */,
@@ -510,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SoundsofScotland/SoundsofScotland.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -529,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tigermoon.sos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradleymorrison.soundsofscotland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -543,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SoundsofScotland/SoundsofScotland.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -562,7 +588,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tigermoon.sos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradleymorrison.soundsofscotland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -603,6 +629,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		469F0E0C2A1E0B3C00B01F29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -610,6 +644,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46584A872A15AB20004729CF /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
+		};
+		469F0E0D2A1E0B3C00B01F29 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 469F0E0C2A1E0B3C00B01F29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		469F0E0F2A1E0B3C00B01F29 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 469F0E0C2A1E0B3C00B01F29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		469F0E162A1E0FB700B01F29 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 469F0E0C2A1E0B3C00B01F29 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -24,6 +24,7 @@ class AppData : ObservableObject {
 struct ContentView: View {
     
     @StateObject private var viewModel = ViewModel(context: PersistenceController.shared.container.viewContext)
+    @StateObject private var authViewModel = AuthViewModel()
     @StateObject var data = AppData()
     @StateObject var globalAudio = AudioManager()
     let button = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
@@ -61,22 +62,23 @@ struct ContentView: View {
                     }
                 }
                 
-                
-                button.view()
-                    .frame(width: 44, height: 44)
-                    .mask(Circle())
-                    .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                    .padding()
-                    .offset(x: data.settingsButtonStatus ? 220 : 0)
+                if (data.selectedTab == .home) {
+                    button.view()
+                        .frame(width: 44, height: 44)
+                        .mask(Circle())
+                        .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .padding()
+                        .offset(x: data.settingsButtonStatus ? 220 : 0)
                     //.offset(x: data.nowPlayingBarOpen ? -80 : 0)
-                    .onTapGesture {
-                        button.setInput("data.settingsButtonStatus", value: data.settingsButtonStatus)
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                            data.settingsButtonStatus.toggle()
-                            data.tabOpen.toggle()
+                        .onTapGesture {
+                            button.setInput("data.settingsButtonStatus", value: data.settingsButtonStatus)
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                data.settingsButtonStatus.toggle()
+                                data.tabOpen.toggle()
+                            }
                         }
-                    }
+                }
                 
                 //
                 NowPlayingBar()
@@ -135,13 +137,14 @@ struct ContentView: View {
             }
             .environmentObject(data)
             .environmentObject(globalAudio)
+            .environmentObject(authViewModel)
             
         }
         .background(Color("Background Light"))
         .onAppear {
             //viewModel.populateDataIfNeeded()
-            viewModel.dataTestPopulate()
-            //viewModel.resetData()
+            //viewModel.dataTestPopulate()
+            viewModel.resetData()
         }
         
         

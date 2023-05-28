@@ -7,11 +7,17 @@
 
 import SwiftUI
 import CoreData
+import Firebase
 
 @main
 struct SoundsofScotlandApp: App {
     // instance of coredata storage
     let persistenceController = PersistenceController.shared
+    
+    // firebase
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {

@@ -7,10 +7,16 @@
 
 import Foundation
 import CoreData
+import AuthenticationServices
+import Firebase
+import FirebaseAuth
+import CryptoKit
 
 class ViewModel : ObservableObject {
     @Published var places: [PlaceEntity] = []
     private let context: NSManagedObjectContext
+    private var currentNonce: String = ""
+    private var errorMessage: String = ""
     
     init(context: NSManagedObjectContext) {
         self.context = context

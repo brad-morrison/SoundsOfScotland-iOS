@@ -56,7 +56,7 @@ struct StarredTempView: View {
             
             Spacer()
         }
-        .padding(.top, 80)
+        .padding(.top, 20)
         .onAppear {
             data.mostRecentTab = .starred
         }
