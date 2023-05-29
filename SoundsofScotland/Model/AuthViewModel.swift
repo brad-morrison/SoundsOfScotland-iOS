@@ -16,11 +16,36 @@ class AuthViewModel : ObservableObject {
     @Published var errorMessage: String = ""
     @Published var currentNonce: String? = "" // Unhashed nonce
     @Published var fullName: PersonNameComponents?
+    @Published var userSignedIn: Bool = false
+    
+    let handle = Auth.auth().addStateDidChangeListener { auth, user in
+        // Handle the user authentication state change here
+        if let user = user {
+            // User is signed in
+            print("CHANGED - User is signed in with uid: \(user.uid)")
+        } else {
+            // User is signed out
+            print("CHANGED - User is signed out")
+        }
+    }
+    
+    // check if logged in
+    func isUserSignedIn() -> Bool {
+        if Auth.auth().currentUser != nil {
+            // user signed in
+            return true
+        } else {
+            // no user signed in
+            return false
+        }
+    }
+    
     
     // signout
     func signOut() {
         do {
             try Auth.auth().signOut()
+            userSignedIn = false
         }
         catch {
             print(error)
@@ -58,12 +83,13 @@ class AuthViewModel : ObservableObject {
                     return
                 }
                 
-                let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+                //let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
                 let appleCredential = OAuthProvider.appleCredential(withIDToken: idTokenString, rawNonce: nonce, fullName: fullName)
                 
                 Task {
                     do {
                         let result = try await Auth.auth().signIn(with: appleCredential)
+                        userSignedIn = true;
                     }
                     catch {
                         print("Error authenticating: \(error.localizedDescription)")
@@ -108,4 +134,8 @@ class AuthViewModel : ObservableObject {
         
         return hashString
     }
+    
+    // email login //
+    
+    
 }

@@ -19,6 +19,7 @@ class AppData : ObservableObject {
     @Published var isPlaying = false
     @Published var shadows = true // controls all card shadows
     @Published var mostRecentTab: Tab = .home
+    //
 }
 
 struct ContentView: View {

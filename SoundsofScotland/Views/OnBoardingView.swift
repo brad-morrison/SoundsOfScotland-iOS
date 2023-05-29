@@ -68,7 +68,9 @@ struct OnBoardingView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
             }
+            .padding()
             
+            Text("or")
             
             // Sign in with Apple //
             SignInWithAppleButton(isRegistering ? .signUp : .signIn) { request in
@@ -80,62 +82,10 @@ struct OnBoardingView: View {
             .cornerRadius(10)
             .padding()
             
-            Button(action: {
-                isRegistering.toggle()
-            }) {
-                Text(isRegistering ? "Already have an account? Login" : "Don't have an account? Register")
-                    .foregroundColor(.blue)
-                    .padding(.top)
-            }
-            
-            if Auth.auth().currentUser != nil {
-                Text("user is signed in")
-            } else {
-                Text("user is NOT signed in")
-            }
-            
-            Button(action: {
-                getUser()
-            }) {
-                Text("Get User")
-                    .foregroundColor(.blue)
-                    .padding(.top)
-            }
-            
-            Button(action: {
-                authViewModel.signOut()
-            }) {
-                Text("Sign Out")
-                    .foregroundColor(.blue)
-                    .padding(.top)
-            }
+            Spacer()
             
         }
-        .padding()
-    }
-    
-    func getUser() {
-        let user = Auth.auth().currentUser
-        if let user = user {
-          // The user's ID, unique to the Firebase project.
-          // Do NOT use this value to authenticate with your backend server,
-          // if you have one. Use getTokenWithCompletion:completion: instead.
-          let uid = user.uid
-          let email = user.email
-          let photoURL = user.photoURL
-          var multiFactorString = "MultiFactor: "
-          for info in user.multiFactor.enrolledFactors {
-            multiFactorString += info.displayName ?? "[DispayName]"
-            multiFactorString += " "
-          }
-            print("username: \(user.displayName)")
-            print("username: \(user.uid)")
-            print("\(Auth.auth().currentUser)")
-            print("\(Auth.auth().currentUser?.displayName)")
-            print(user.displayName)
-            print(user.email)
-            print(user.uid)
-        }
+        .padding()
     }
 }
 

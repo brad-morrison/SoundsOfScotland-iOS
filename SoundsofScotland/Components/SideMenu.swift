@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SideMenu: View {
-    //@EnvironmentObject var data : AppData
-    @State private var isShowingOnboarding = false
+    @EnvironmentObject var data : AppData
+    @EnvironmentObject var authData : AuthViewModel
+    
     
     var body: some View {
         VStack {
@@ -26,6 +27,18 @@ struct SideMenu: View {
                 Spacer()
             }
             .padding()
+            
+            if (authData.isUserSignedIn() == false) {
+                OnboardingSection()
+            } else {
+                Button(action: {
+                    authData.signOut()
+                }) {
+                    Text("Sign Out")
+                        .foregroundColor(.blue)
+                        .padding(.top)
+                }
+            }
             
             Text("BROWSE")
                 .customFont(.subheadline2)
@@ -45,17 +58,7 @@ struct SideMenu: View {
                 .padding(.top, 40)
                 .opacity(0.7)
             
-            Button {
-                isShowingOnboarding.toggle()
-            } label: {
-                Text("login")
-                    .customFont(.headline)
-            }
-            .padding()
-            .padding(.horizontal, 100)
-            .background(Color(.lightGray))
-            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .padding(.top, 80)
+            
             
             Spacer()
             
@@ -63,12 +66,10 @@ struct SideMenu: View {
         }
         .foregroundColor(.black)
         .frame(maxWidth: 288, maxHeight: .infinity)
-        //.background(Color("Background Light"))
+        .background(Color("Background Light"))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .frame(maxWidth: .infinity, alignment: .leading)
-        .sheet(isPresented: $isShowingOnboarding) {
-            OnBoardingView()
-        }
+        
     }
 }
 
@@ -76,5 +77,8 @@ struct SideMenu: View {
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
         SideMenu()
+            .environmentObject(AppData())
+            .environmentObject(AuthViewModel())
+
     }
 }

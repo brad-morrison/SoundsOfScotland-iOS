@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		462695CD2A248E7100CDB6D5 /* OnboardingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462695CC2A248E7100CDB6D5 /* OnboardingSection.swift */; };
+		462695CF2A249B6B00CDB6D5 /* FirebaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462695CE2A249B6B00CDB6D5 /* FirebaseUITest.swift */; };
 		4627C8F12A15517F00335E9D /* MediumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F02A15517F00335E9D /* MediumCard.swift */; };
 		4627C8F32A157F2B00335E9D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F22A157F2B00335E9D /* HomeView.swift */; };
 		4627C8F52A1580D900335E9D /* NewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4627C8F42A1580D900335E9D /* NewSection.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		462695CC2A248E7100CDB6D5 /* OnboardingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSection.swift; sourceTree = "<group>"; };
+		462695CE2A249B6B00CDB6D5 /* FirebaseUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUITest.swift; sourceTree = "<group>"; };
 		4627C8F02A15517F00335E9D /* MediumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumCard.swift; sourceTree = "<group>"; };
 		4627C8F22A157F2B00335E9D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4627C8F42A1580D900335E9D /* NewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSection.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				467A9EE32A16DD2700055307 /* StarredTempView.swift */,
 				4699BB382A1D6F130085ABB1 /* SceneViewCircle.swift */,
 				469F0E132A1E0BD000B01F29 /* OnBoardingView.swift */,
+				462695CE2A249B6B00CDB6D5 /* FirebaseUITest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				4627C9022A15879300335E9D /* TrySection.swift */,
 				4627C9042A15883B00335E9D /* ExploreSection.swift */,
 				4627C9062A1588AE00335E9D /* ComingSoonSection.swift */,
+				462695CC2A248E7100CDB6D5 /* OnboardingSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -377,9 +383,11 @@
 			files = (
 				46D15DEA2A15B58A00F49CC0 /* RoundButton.swift in Sources */,
 				4627C9012A15870C00335E9D /* SquareCard.swift in Sources */,
+				462695CD2A248E7100CDB6D5 /* OnboardingSection.swift in Sources */,
 				465A83052A1410AF0009DF51 /* CustomFont.swift in Sources */,
 				46BCBC042A15AD3900151EC6 /* SideMenu.swift in Sources */,
 				4627C9052A15883B00335E9D /* ExploreSection.swift in Sources */,
+				462695CF2A249B6B00CDB6D5 /* FirebaseUITest.swift in Sources */,
 				46A828EC2A140C37004E08BC /* ContentView.swift in Sources */,
 				4627C8F32A157F2B00335E9D /* HomeView.swift in Sources */,
 				4627C9032A15879300335E9D /* TrySection.swift in Sources */,
